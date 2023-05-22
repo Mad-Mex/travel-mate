@@ -8,7 +8,7 @@ const theme = {
         textUnderscore: "#0491E0",
         background: "#FBF7F4",
         black: "#191923",
-        white: "#FFF",
+        white: "#FFFFFF",
         gray: "#A3B4A2",
         grayLight: "#EFEFEF",
         success: "#0BA151"
