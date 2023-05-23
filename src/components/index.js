@@ -5,4 +5,6 @@ export { default as UserInfoBox } from "./userInfoBox";
 export { default as HeaderTitleHome } from "./headerTitleHome";
 export { default as SearchLocationAndDate } from "./searchLocationAndDate";
 export { default as CardInfo } from "./cardInfo"; 
-export { default as Banner } from "./banner";  
+export { default as Banner } from "./banner";
+export { default as SearchInput } from "./searchInput";  
+export { default as SearchResults } from "./searchResults";
