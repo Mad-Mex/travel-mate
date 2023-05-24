@@ -8,3 +8,5 @@ export { default as CardInfo } from "./cardInfo";
 export { default as Banner } from "./banner";
 export { default as SearchInput } from "./searchInput";  
 export { default as SearchResults } from "./searchResults";
+export { default as ProfileInfoCard } from "./profileInfoCard";
+export { default as ProfileOptionCard } from "./profileOptionCard";
