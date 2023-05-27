@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react'
-import { Pressable, FlatList, Text, View } from 'react-native'
+import { Pressable, Text, View } from 'react-native'
 import { Button, Input } from '../../components'
-import useNewUser from '../../hooks/useNewUser'
+
 import { Ionicons } from '@expo/vector-icons';
 import styles from './styles'
+import { useDispatch } from 'react-redux';
+import { createUser } from '../../store/actions';
 
 
 const requirements = [
@@ -30,7 +32,8 @@ const SignInForm = ({ navigation }) => {
   const [validationPassword, setValidationPassword] = useState(false)
 
   const [enabled, setEnabled] = useState(false)
-  const {newUser, setNewUser}  = useNewUser()  
+  const dispatch = useDispatch()
+  
 
 
   useEffect(() => {
@@ -62,15 +65,17 @@ const SignInForm = ({ navigation }) => {
 
 
   const onHandleSubmitForm = () => {
+
+   
     if( enabled ){
 
-      const data = {
+      const dataUser = {
         name: inputName,
         email: inputEmail,
         password: inputPassword
       }
 
-      setNewUser( data )
+      dispatch( createUser( dataUser ))
       navigation.navigate("ProfilePicture")
     }
   }

@@ -1,5 +1,6 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { Welcome,  CreatedAccount, SignInForm, ProfilePicture } from "../../screens";
+import { Welcome,  CreatedAccount, SignInForm, ProfilePicture, Home } from "../../screens";
+import TabsNavigator from "../tabs";
 
 
 const Stack = createNativeStackNavigator()
@@ -11,6 +12,7 @@ const SignInNavigator = () => {
             <Stack.Screen name='SignInForm'  component={SignInForm} options={{ title: "" }}  />
             <Stack.Screen name="ProfilePicture" component={ProfilePicture } options={{ title: "" }}  />
             <Stack.Screen name='CreatedAccount' component={CreatedAccount} options={{ headerShown: false  }}  />
+            <Stack.Screen name="TabsNavigator" component={ TabsNavigator } options={{ headerShown: false  }} />
         </Stack.Navigator>
     )
 }

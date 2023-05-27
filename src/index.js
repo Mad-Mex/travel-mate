@@ -1,9 +1,9 @@
-import 'react-native-gesture-handler';
 import { ActivityIndicator } from 'react-native';
-
 import { createStackNavigator } from '@react-navigation/stack';
-import { UserProvider } from './context/UserProvider';
+import { Provider } from 'react-redux';
+import store from './store';
 import { useFonts } from 'expo-font';
+
 import theme from './constants/theme';
 import AppNavigator from './navigation';
 
@@ -29,9 +29,9 @@ export default function App() {
 
 
   return (
-    <UserProvider>
+    <Provider store={ store } >
       <AppNavigator />
-    </UserProvider>
+    </Provider>
   );
 }
 

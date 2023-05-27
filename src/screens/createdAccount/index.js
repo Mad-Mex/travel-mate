@@ -66,7 +66,7 @@ const CreatedAccount = ({ navigation }) => {
     <Button 
       buttonStyle={ styles.button }
       enabled={ true }
-      onPress={ () => navigation.navigate("Home")}
+      onPress={ () => navigation.navigate("TabsNavigator")}
       >
         <Text style={ styles.textButton }> Entendido </Text>
     </Button>        

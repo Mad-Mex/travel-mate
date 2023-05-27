@@ -1,18 +1,22 @@
 import React from 'react'
 import { View } from "react-native"
 import { ProfileInfoCard, ProfileOptionCard } from '../../components'
+import { useSelector } from 'react-redux'
 import { styles } from './styles'
 
 
 const Profile = () => {
 
+  const { user } = useSelector( state => state.user )
+  
+  
   return (
     
     <View style={ styles.view } > 
 
       <ProfileInfoCard 
-        userName="Nombre del usuario"
-        userMail="Correo del usuario"
+        userName={ user.name }
+        userMail={ user.email }
       />
 
       <ProfileOptionCard

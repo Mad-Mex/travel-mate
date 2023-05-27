@@ -1,31 +1,19 @@
-import { useEffect, useState } from 'react'
 import { Image, Pressable, Text, View } from "react-native"
 import { Button, UserInfoBox } from '../../components'
+import { useSelector } from 'react-redux'
 import styles from './styles'
-import useNewUser from '../../hooks/useNewUser'
 
-const defaultProfileImage = require("../../../assets/images/user_icon.png")
 
 
 const ProfilePicture = ({ navigation }) => {
 
-  const [profileImage, setProfileImage] = useState( defaultProfileImage )
-  const [enabled, setEnabled] = useState(false)
-  const { newUser, setNewUser  } = useNewUser()
+  const { user } = useSelector( state => state.user ) 
+
   
-
-  useEffect(() => {
-    if(profileImage !== defaultProfileImage ){
-        setEnabled(true)
-    }
-  }, [profileImage])
-    
-
   const onSubmitCreateAccount= () => {
     navigation.navigate("CreatedAccount")
   }
 
-  
     
   return (
 
@@ -42,12 +30,12 @@ const ProfilePicture = ({ navigation }) => {
 
        <UserInfoBox 
           label="Nombre"
-          userName={ newUser.name }
+          userName={ user.name }
        />
 
         <UserInfoBox 
           label="Correo"
-          userName= { newUser.email }
+          userName={ user.email }
        />
 
         <Button
