@@ -7,7 +7,7 @@ import { styles } from './styles'
 
 const Profile = () => {
 
-  const { user } = useSelector( state => state.user )
+  const { auth } = useSelector( state => state.auth )
   
   
   return (
@@ -15,8 +15,8 @@ const Profile = () => {
     <View style={ styles.view } > 
 
       <ProfileInfoCard 
-        userName={ user.name }
-        userMail={ user.email }
+        userName=""
+        userMail=""
       />
 
       <ProfileOptionCard

@@ -1,12 +1,12 @@
 import { NavigationContainer } from "@react-navigation/native";
-import SignInNavigator from "./signIn";
+import AuthNavigator from "./auth";
 
 
 
 const Navigation = () => {
     return(
         <NavigationContainer>
-            <SignInNavigator />
+            <AuthNavigator />
         </NavigationContainer>
     )
 }

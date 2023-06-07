@@ -1,12 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {  ImageBackground, Text, View } from 'react-native';
-import { Button, ModalSignIn } from '../../components';
+import { Button } from '../../components';
 import styles from './styles';
 
 
 const Welcome = ({ navigation }) => {
-
-  const [isModalVisible, setIsModalVisible] = useState(false)
 
   return (
 
@@ -19,40 +17,25 @@ const Welcome = ({ navigation }) => {
                 <Text style={ styles.title } > planifia tu aventura  </Text>
 
                 <Button   
-                  buttonStyle={ styles.signInButton }
-                  enabled={ true }
-                  onPress={ () => setIsModalVisible(true)}
+                  buttonStyle={ styles.signUpButton }
+                  disabled={ false }
+                  onPress={ () =>  navigation.navigate("SignUp") }
                 >  
-                  <Text style={ styles.signInText } > Registrarse </Text>
+                  <Text style={ styles.signUpText } > Registrarse </Text>
                 </Button>
-
-
                 
                 <Button 
-                  buttonStyle={ styles.logInButton }
-                  enabled={ false }
+                  buttonStyle={ styles.signInButton }
+                  disabled={ false }
+                  onPress={ ()=> navigation.navigate("SignIn")   }
                 >
-                  <Text> Iniciar sesión </Text>
+                  <Text style={ styles.signInText } > Iniciar sesión </Text>
                 </Button>
 
-
-                <Text style={ styles.privacity } > Al continuar aceptas nuestros 
-                    <Text style={ styles.spanText } > términos y condiciones </Text>
-                    y
-                    <Text style={ styles.spanText } > la política de privacidad </Text>
-                </Text>
            </View>
         </ImageBackground>
 
-        <ModalSignIn 
-          isVisible={isModalVisible }
-          animationType="slide"
-          onCancel={ () => setIsModalVisible(false) }
-          onNavigate={ () => navigation.navigate("SignInForm")   }
-        /> 
         
-        
-
     </View>
   )
 }

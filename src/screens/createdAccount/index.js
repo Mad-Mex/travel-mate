@@ -1,33 +1,11 @@
 import React from 'react'
 import { FlatList, Image, Text, View } from 'react-native'
+import { Button } from '../../components';
+import { benefits } from '../../constants';
 import { FontAwesome } from '@expo/vector-icons';
 import styles from './styles'
-import { Button } from '../../components';
 
 
-const listBenefits = [
-  {
-    iconName: "plane",
-    benefit: "Hospedaje en más de 1,000,000 sitios turísticos"
-  },
-
-  {
-    iconName: "tag",
-    benefit: "Ofertas relámpago exclusivas"
-  },
-
-  {
-    iconName: "ticket",
-    benefit: "Reservaciones ilimitadas"
-  },
-
-  {
-    iconName: "gift",
-    benefit: "Recompensas, bonificaciones y descuentos"
-  },
-
-
-]
 
 const CreatedAccount = ({ navigation }) => {
 
@@ -52,11 +30,11 @@ const CreatedAccount = ({ navigation }) => {
 
         <View style={ styles.listContainer } >
           <FlatList 
-            data={ listBenefits }
+            data={ benefits }
             renderItem={({ item, index }) => (
               <View style={ styles.container } key={ index }  >
                 <FontAwesome name={ item.iconName } style={ styles.icon } />
-                <Text style={ styles.benefit } > { item.benefit } </Text>
+                <Text style={ styles.feature } > { item.feature } </Text>
               </View>
             )}
           />
@@ -65,7 +43,7 @@ const CreatedAccount = ({ navigation }) => {
 
     <Button 
       buttonStyle={ styles.button }
-      enabled={ true }
+      disabled={ false }
       onPress={ () => navigation.navigate("TabsNavigator")}
       >
         <Text style={ styles.textButton }> Entendido </Text>

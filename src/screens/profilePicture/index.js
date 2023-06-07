@@ -7,7 +7,11 @@ import styles from './styles'
 
 const ProfilePicture = ({ navigation }) => {
 
-  const { user } = useSelector( state => state.user ) 
+  const user  = useSelector( state => state.auth ) 
+
+  console.log( user );
+
+  
 
   
   const onSubmitCreateAccount= () => {
@@ -30,7 +34,7 @@ const ProfilePicture = ({ navigation }) => {
 
        <UserInfoBox 
           label="Nombre"
-          userName={ user.name }
+          userName=""
        />
 
         <UserInfoBox 

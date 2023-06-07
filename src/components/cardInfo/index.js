@@ -31,7 +31,7 @@ const CardInfo = ({ url, discount, discountPercentage,  lodging, hotelName, city
             { discount === true ? <Text style={ styles.priceDiscount } > { `$${ previousPrice }` } </Text> : null }
             <View>
               <Text style={ styles.price } > { `$${ price }` } </Text>
-              <Text style={ styles.textPrice } > c/noche </Text>
+              <Text style={ styles.priceSubtitle } > c/noche </Text>
             </View>
           </View>
         </View>        

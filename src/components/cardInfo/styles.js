@@ -109,7 +109,7 @@ export const styles = StyleSheet.create({
     },
 
 
-    textPrice: {
+    priceSubtitle: {
         marginRight: 6,
         fontFamily: 'FiraSans-Regular',
         fontSize: 10,

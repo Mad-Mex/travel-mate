@@ -1,15 +1,17 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { Welcome,  CreatedAccount, SignInForm, ProfilePicture, Home } from "../../screens";
+import { Welcome,  CreatedAccount, SignUp, SignIn, ProfilePicture } from "../../screens";
 import TabsNavigator from "../tabs";
 
 
 const Stack = createNativeStackNavigator()
 
-const SignInNavigator = () => {
+const AuthNavigator = () => {
+
     return(
         <Stack.Navigator initialRouteName="Welcome" >
             <Stack.Screen name='Welcome'  component={Welcome} options={{ headerShown:false }}  />
-            <Stack.Screen name='SignInForm'  component={SignInForm} options={{ title: "" }}  />
+            <Stack.Screen name='SignUp'  component={SignUp} options={{ title: "Crear cuenta" }}  />
+            <Stack.Screen name='SignIn'  component={SignIn} options={{ title: "Iniciar sesión" }}  />
             <Stack.Screen name="ProfilePicture" component={ProfilePicture } options={{ title: "" }}  />
             <Stack.Screen name='CreatedAccount' component={CreatedAccount} options={{ headerShown: false  }}  />
             <Stack.Screen name="TabsNavigator" component={ TabsNavigator } options={{ headerShown: false  }} />
@@ -17,4 +19,4 @@ const SignInNavigator = () => {
     )
 }
 
-export default SignInNavigator;
+export default AuthNavigator;

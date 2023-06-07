@@ -1,5 +1,5 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { Search } from "../../screens";
+import { HotelDetail, Search, SearchResults } from "../../screens";
 
 
 
@@ -10,7 +10,9 @@ const SearchNavigator = () => {
     return(
 
         <Stack.Navigator initialRouteName="Search">
-            <Stack.Screen name="Search" component={ Search }  options={{ title: "" }} />   
+            <Stack.Screen name="Search" component={ Search }  options={{ title: "" }} />
+            <Stack.Screen name="SearchResults" component={ SearchResults } options={{ title: "Resultados" }}/>
+            <Stack.Screen name="HotelDetail" component={ HotelDetail }  options={{ title: "" }} />   
         </Stack.Navigator>
     )
 }

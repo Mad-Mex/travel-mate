@@ -23,7 +23,7 @@ const SearchResults = ({ data, searchInput, navigation }) => {
 
                 return(
 
-                    <TouchableOpacity style={ styles.cardContainer } onPress={ () => console.log("Button Pressed")}>
+                    <TouchableOpacity style={ styles.cardContainer } onPress={() => navigation.navigate("SearchResults")   }>
                         <View style={ styles.flexContainer } >
                             <View>
                                 <AntDesign name="enviromento" style={styles.cardIcon} />

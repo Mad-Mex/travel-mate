@@ -1,1 +1,1 @@
-export * from "./user.action";
+export * from "./auth.action";

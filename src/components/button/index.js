@@ -2,11 +2,11 @@ import React from 'react';
 import { TouchableOpacity } from 'react-native';
 import styles from './styles';
 
-const Button = ({  buttonStyle, children, onPress, enabled}) => {
+const Button = ({  buttonStyle, children, onPress, disabled}) => {
   return (
     <TouchableOpacity 
-      enabled={ enabled }
-      style={[ styles.button, buttonStyle, !enabled ? { opacity: 0.5 } : { opacity: 1 } ]} 
+      disabled={ disabled }
+      style={[ styles.button, buttonStyle, disabled ? { opacity: 0.5 } : { opacity: 1 } ]} 
       onPress={ onPress }     >
          { children }
     </TouchableOpacity>

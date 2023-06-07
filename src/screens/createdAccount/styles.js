@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
     },
 
 
-    benefit: {
+    feature: {
         fontFamily: 'FiraSans-Regular',
         fontSize: 14,
         color: theme.colors.white

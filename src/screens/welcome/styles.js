@@ -17,9 +17,9 @@ const styles = StyleSheet.create({
 
     textLogo: {
         marginLeft: 8,
-        marginTop: 386,
+        marginTop: 450,
         fontFamily: 'FiraSans-Regular',
-        fontSize: 44,
+        fontSize: 42,
         color: theme.colors.white
     },
 
@@ -27,51 +27,34 @@ const styles = StyleSheet.create({
     title: {
         marginLeft: 16,
         fontFamily: 'FiraSans-Regular',
-        fontSize: 20,
+        fontSize: 18,
         color: theme.colors.white
     },
 
 
-    signInButton:{
-        marginTop: 40,
+    signUpButton:{
+        marginTop: 30,
         backgroundColor: theme.colors.primary,
+    },
+
+
+    signUpText:{
+        fontFamily: 'FiraSans-Regular',
+        fontSize: 18,
+        color: theme.colors.white
+    },
+
+
+    signInButton: {       
+        marginTop: 20,
+        backgroundColor: theme.colors.white,
     },
 
 
     signInText:{
         fontFamily: 'FiraSans-Regular',
         fontSize: 18,
-        color: theme.colors.white
-    },
-
-
-    logInButton: {       
-        marginTop: 20,
-        backgroundColor: theme.colors.white,
-    },
-
-
-    logInText:{
-        fontFamily: 'FiraSans-Regular',
-        fontSize: 18,
         color: theme.colors.black
-    },
-
-
-    privacity:{
-        marginTop:12,
-        marginHorizontal: 44,
-        fontFamily: 'FiraSans-Light',
-        fontSize: 10,
-        textAlign: "center",
-        lineHeight: 16,
-        color: theme.colors.white
-    },
-
-
-    spanText:{
-        textDecorationLine: "underline",
-        color: theme.colors.textUnderscore
     }
 });
 

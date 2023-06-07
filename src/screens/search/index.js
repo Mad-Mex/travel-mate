@@ -9,7 +9,6 @@ const Search = ({ navigation }) => {
   const [searchInput, setSearchInput] = useState("")  
 
   
-
   return (
 
     <View style={styles.view}>

@@ -42,7 +42,7 @@ const SearchLocationAndDate = () => {
                 <View style={ styles.bottomContainer } >  
                     <Button  
                         buttonStyle={ styles.button }
-                        enabled={ true }
+                        disabled={ false }
                         onPress={()=> console.log("Button pressed") }
                     >
                         <Text style={ styles.textButton } > Buscar </Text>
