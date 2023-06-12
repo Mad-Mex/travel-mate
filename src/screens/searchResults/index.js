@@ -5,8 +5,11 @@ import { styles } from './styles'
 import { CardInfoLodgingLarge } from '../../components'
 
 
-const SearchResults = ({ navigation }) => {
+const SearchResults = ({ navigation, route }) => {
 
+  const { item  } = route.params
+  
+ 
   return (
 
    <ScrollView style={ styles.view } >    
@@ -24,8 +27,6 @@ const SearchResults = ({ navigation }) => {
         <Text style={ styles.textIcon } > 1 huésped </Text>
       </View>  
     </View>
-
-    <Image source={ require("../../../assets/images/google_map_2.jpg") } style={ styles.imageMap } />
 
     <Text style={ styles.title } > Resultados </Text> 
 

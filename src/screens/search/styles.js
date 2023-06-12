@@ -4,20 +4,16 @@ import theme from "../../constants/theme";
 export const styles = StyleSheet.create({
     view: {
         flex: 1,
-        backgroundColor: theme.colors.grayLight
+        backgroundColor: theme.colors.white
     },
 
 
-    sectionTitle: {
-        marginTop: 26,
-        marginLeft: 12,
-        marginBottom: 18,
-        fontFamily: 'FiraSans-Medium',
-        fontSize: 24,
-        color: theme.colors.text
+    searchInput: {
+        marginTop: 40,
+        marginBottom: 20
     },
 
-    
+ 
     result: {
         marginTop: 30,
         marginLeft: 16,

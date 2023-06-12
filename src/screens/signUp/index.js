@@ -53,7 +53,7 @@ const SignUp= ({ navigation }) => {
     if(!isLoading && !hasError){
       setTimeout(() => {
         navigation.navigate("CreatedAccount")
-      }, 900)
+      }, 300)
     }
   }
 

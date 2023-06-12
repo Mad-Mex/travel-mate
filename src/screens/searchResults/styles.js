@@ -49,15 +49,7 @@ export const styles = StyleSheet.create({
         color: theme.colors.text
     },
 
-
-    imageMap: {
-        marginVertical: 30,
-        marginHorizontal: 20,
-        width: "auto",
-        height: 180
-    },
-
-
+    
     title: {
         marginBottom: 24,
         marginHorizontal: 20,

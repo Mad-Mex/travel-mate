@@ -1,10 +1,13 @@
 import React from 'react';
 import { FlatList, Text, TouchableOpacity, View } from "react-native";
+import { useNavigation } from '@react-navigation/native';
 import { AntDesign } from '@expo/vector-icons';
 import { styles } from './styles';
 
 
-const SearchResults = ({ data, searchInput, navigation }) => {
+const SearchFilterResults = ({ data, searchInput }) => {
+
+  const navigation = useNavigation()
 
   return (
 
@@ -23,7 +26,7 @@ const SearchResults = ({ data, searchInput, navigation }) => {
 
                 return(
 
-                    <TouchableOpacity style={ styles.cardContainer } onPress={() => navigation.navigate("SearchResults")   }>
+                    <TouchableOpacity style={ styles.cardContainer } onPress={() => navigation.navigate("SearchResults", { item }  )   }>
                         <View style={ styles.flexContainer } >
                             <View>
                                 <AntDesign name="enviromento" style={styles.cardIcon} />
@@ -42,5 +45,5 @@ const SearchResults = ({ data, searchInput, navigation }) => {
   )
 }
 
-export default SearchResults
+export default SearchFilterResults
 

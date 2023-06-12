@@ -5,6 +5,7 @@ export { default as ProfilePicture } from "./profilePicture";
 export { default as CreatedAccount } from "./createdAccount";
 export { default as Home } from "./home"; 
 export { default as Search } from "./search";
+export { default as Maps } from "./maps";
 export { default as SearchResults } from "./searchResults";
 export { default as HotelDetail } from "./hotelDetail";
 export { default as Profile } from "./profile";

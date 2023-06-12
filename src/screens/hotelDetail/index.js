@@ -27,9 +27,6 @@ const HotelDetail = ({ navigation }) => {
             </View>
             
             
-            
-            
-
             <View>
                 <Text style={ styles.lodging } > Casa - pareja </Text>
                 <Text style={ styles.hotelName } > Casa Roma Azulejos </Text>
@@ -46,7 +43,6 @@ const HotelDetail = ({ navigation }) => {
 
             
             <>
-    
                 <FlatList 
                     data={ selectedOption }
                     horizontal
@@ -113,13 +109,6 @@ const HotelDetail = ({ navigation }) => {
 
             <View style={ styles.divider } ></View>
 
-
-            <>
-                <Text style={ styles.titleSection } > Ubicación </Text>
-                <Image source={ require("../../../assets/images/google_map_2.jpg") } style={ styles.imageLocation } />
-                <Text style={styles.location } > Debido a que éste es un domicilio privado; te enviaremos la </Text> 
-                <Text style={[styles.location, styles.marginBottom ]} > ubicación exacta, una vez que hayas confirmado tu pago  </Text>   
-            </>
 
             <View style={ styles.divider } ></View>
 

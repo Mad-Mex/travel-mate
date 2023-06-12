@@ -252,15 +252,6 @@ export const styles = StyleSheet.create({
     },
 
 
-    location: {
-        marginHorizontal: 20,
-        fontFamily: 'FiraSans-Regular',
-        fontSize: 12,
-        lineHeight: 18,
-        color: theme.colors.text
-    },
-
-
     marginBottom: {
         marginBottom: 22
     },

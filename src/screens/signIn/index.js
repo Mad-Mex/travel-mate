@@ -52,7 +52,7 @@ const SignIn = ({ navigation }) => {
     if(!isLoading && !hasError){
       setTimeout(() => {
         navigation.navigate("TabsNavigator")
-      }, 900)
+      }, 250)
     }
   }
 

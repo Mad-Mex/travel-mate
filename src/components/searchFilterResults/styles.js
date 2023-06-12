@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
         paddingTop: 4,
         paddingLeft: 10,
         height: 80,
-        backgroundColor: theme.colors.white,
+        backgroundColor: theme.colors.grayLight,
     },
 
 
