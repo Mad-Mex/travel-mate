@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import theme from "../../constants/theme";
+
 
 
 export const styles = StyleSheet.create({
@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
         marginHorizontal: 20,
         width: "auto",
         height: 50,
-        backgroundColor: theme.colors.grayLight
+        backgroundColor: "#efefef"
     },
 
 

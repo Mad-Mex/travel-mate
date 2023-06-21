@@ -1,11 +1,11 @@
 import { StyleSheet } from "react-native";
-import theme from "../../constants/theme";
+
 
 export const styles = StyleSheet.create({
 
     view: {
         flex: 1,
-        color: theme.colors.white
+        color: "#fff"
     },
 
 
@@ -15,7 +15,7 @@ export const styles = StyleSheet.create({
         marginBottom: 18,
         fontFamily: 'FiraSans-Medium',
         fontSize: 24,
-        color: theme.colors.text
+        color: "#000000"
     }
 
     

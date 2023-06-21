@@ -1,7 +1,6 @@
 export { default as Welcome } from "./welcome";
 export { default as SignUp } from "./signUp";
 export { default as SignIn } from "./signIn";
-export { default as ProfilePicture } from "./profilePicture";
 export { default as CreatedAccount } from "./createdAccount";
 export { default as Home } from "./home"; 
 export { default as Search } from "./search";

@@ -1,12 +1,12 @@
 import { StyleSheet } from "react-native";
-import theme from "../../constants/theme";
+
 
 
 export const styles = StyleSheet.create({
 
     view: {
         flex: 1,
-        backgroundColor: theme.colors.white
+        backgroundColor: "#fff"
     },
 
     imageContainer: {
@@ -40,12 +40,12 @@ export const styles = StyleSheet.create({
 
 
     iconColor: { 
-        color: theme.colors.white
+        color: "#fff"
     },
 
 
     iconColorFulfilled: {
-        color: theme.colors.primary
+        color: "orange"
     },
 
 
@@ -54,7 +54,7 @@ export const styles = StyleSheet.create({
         marginLeft: 20,
         fontFamily: 'FiraSans-Regular',
         fontSize: 14,
-        color: theme.colors.text
+        color: "#000000"
     },
 
 
@@ -62,7 +62,7 @@ export const styles = StyleSheet.create({
         marginLeft: 17,
         fontFamily: 'FiraSans-SemiBold',
         fontSize: 24,
-        color: theme.colors.text
+        color: "#000000"
     },
 
 
@@ -71,7 +71,7 @@ export const styles = StyleSheet.create({
         marginBottom: 12,
         fontFamily: 'FiraSans-Light',
         fontSize: 14,
-        color: theme.colors.text
+        color: "#000000"
     },
 
 
@@ -89,21 +89,21 @@ export const styles = StyleSheet.create({
         marginRight: 12,
         width: 120,
         height: 30,
-        backgroundColor: theme.colors.success
+        backgroundColor: "green"
     },
 
 
     ranking: {
         fontFamily: 'FiraSans-Regular',
         fontSize: 14,
-        color: theme.colors.white
+        color: "#fff"
     },
 
 
     numberReview: {
         fontFamily: 'FiraSans-Regular',
         fontSize: 14,
-        color: theme.colors.text
+        color: "#000000"
     },
 
 
@@ -111,7 +111,7 @@ export const styles = StyleSheet.create({
         marginHorizontal: 20,
         width: "auto",
         borderWidth: 0.5,
-        borderColor: theme.colors.gray
+        borderColor: "#efefef"
     },
 
 
@@ -120,7 +120,7 @@ export const styles = StyleSheet.create({
         marginLeft: 18, 
         fontFamily: 'FiraSans-Medium',
         fontSize: 15,
-        color: theme.colors.text
+        color: "#000000"
     },
 
 
@@ -130,7 +130,7 @@ export const styles = StyleSheet.create({
         marginBottom: 10,
         fontFamily: 'FiraSans-Medium',
         fontSize: 18,
-        color: theme.colors.text
+        color: "#000000"
     },
 
 
@@ -138,7 +138,7 @@ export const styles = StyleSheet.create({
         marginHorizontal: 18,
         fontFamily: 'FiraSans-Regular',
         fontSize: 14,
-        color: theme.colors.text
+        color: "#000000"
     },
 
 
@@ -153,7 +153,7 @@ export const styles = StyleSheet.create({
     icon: {
         marginRight: 16,
         fontSize: 28,
-        color: theme.colors.text
+        color: "#000000"
     },
 
 
@@ -161,14 +161,14 @@ export const styles = StyleSheet.create({
         marginBottom: 2,
         fontFamily: 'FiraSans-Medium',
         fontSize: 16,
-        color: theme.colors.text
+        color: "#000000"
     },
 
 
     featureSubtitle: {
         fontFamily: 'FiraSans-Regular',
         fontSize: 13,
-        color: theme.colors.text
+        color: "#000000"
     },
 
 
@@ -205,14 +205,14 @@ export const styles = StyleSheet.create({
     serviceIcon: {
         marginRight: 6,
         fontSize: 26,
-        color: theme.colors.black
+        color: "#000000"
     },
 
 
     textIcon: {
         fontFamily: 'FiraSans-Regular',
         fontSize: 15,
-        color: theme.colors.text  
+        color: "#000000"
     },
 
 
@@ -231,7 +231,7 @@ export const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: "#1F3FE9",
         borderRadius: 48/2,
-        backgroundColor: theme.colors.white
+        backgroundColor: "#fff"
     },
 
 
@@ -261,7 +261,7 @@ export const styles = StyleSheet.create({
         marginHorizontal: 20,
         fontFamily: 'FiraSans-Regular',
         fontSize: 14,
-        color: theme.colors.text
+        color: "#000000"
     },
 
 

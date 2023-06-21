@@ -1,5 +1,6 @@
-import { StyleSheet } from "react-native";
-import theme from "../../constants/theme";
+import { StyleSheet } from "react-native"
+import { theme } from "../../constants"
+
 
 const styles = StyleSheet.create({
     imageBackground: {
@@ -47,14 +48,14 @@ const styles = StyleSheet.create({
 
     signInButton: {       
         marginTop: 20,
-        backgroundColor: theme.colors.white,
+        backgroundColor:  theme.colors.white
     },
 
 
     signInText:{
         fontFamily: 'FiraSans-Regular',
         fontSize: 18,
-        color: theme.colors.black
+        color: theme.colors.text
     }
 });
 

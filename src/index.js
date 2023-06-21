@@ -3,8 +3,6 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { Provider } from 'react-redux';
 import store from './store';
 import { useFonts } from 'expo-font';
-
-import theme from './constants/theme';
 import AppNavigator from './navigation';
 
 
@@ -23,7 +21,7 @@ export default function App() {
 
   if(!loaded){
     return(
-        <ActivityIndicator size={ 24 }  color={ theme.colors.secondary }  />
+        <ActivityIndicator size={ 24 }  color="orange"  />
     )
   }
 

@@ -1,12 +1,13 @@
 import { StyleSheet } from "react-native";
-import theme from "../../constants/theme";
+import { theme } from "../../constants"
+
 
 export const styles = StyleSheet.create({
 
     tabBar: {
         paddingTop: 8,
         height: 68,
-        shadowColor: "#000000",
+        shadowColor: theme.colors.primary,
         shadowOffset: {
 	        width: 0,
 	        height: -60,

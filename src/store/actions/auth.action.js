@@ -38,11 +38,11 @@ export const signUp = ({ email, password } ) => {
          }
 
          const data = await response.json()
-
+         
          dispatch({
             type: SIGN_UP_SUCCESS,
             token: data.idToken,
-            userId: data.localId
+            userId: result.insertId
          })
          
       } catch (error) {

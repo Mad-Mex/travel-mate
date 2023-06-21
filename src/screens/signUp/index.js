@@ -1,19 +1,21 @@
 import { useReducer, useState } from 'react'
-import { ActivityIndicator, Modal, Pressable, Text, View } from 'react-native'
-import { Button, FormInput, Label } from '../../components'
+import { Pressable, Text, View } from 'react-native'
+import { Button, Label } from '../../components'
+import { FormInput  } from "../../components/input"
+import { LoadingModal } from "../../components/modal"
 import { clearError, signUp } from '../../store/actions'
 import { UPDATE_FORM, onInputChange } from '../../utils/validateForm'
 import { useDispatch, useSelector } from 'react-redux'
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { styles }  from './styles'
-import theme from '../../constants/theme'
 
-  
+
 const initialState = {
   email: { value: "", error: "", touched: false, hasError: true },
   password: { value: "", error: "", touched: false, hasError: true },
   isFormValid: false
 }
+
 
 const formReducer = (state, action) => {
   switch (action.type) {
@@ -109,6 +111,7 @@ const SignUp= ({ navigation }) => {
             iconName="lock-outline"
             iconStyle={ styles.inputIcon }        
         />
+
         <Pressable style={ styles.eyeContainer } onPress={() => setHidePassword(!hidePassword)} >
           <MaterialCommunityIcons name={ hidePassword ? "eye-off-outline" : "eye-outline" } style={ styles.eyeIcon } />
         </Pressable>
@@ -119,7 +122,6 @@ const SignUp= ({ navigation }) => {
         buttonStyle={ styles.button } 
         disabled={ !formState.isFormValid }  
         onPress={ onHandlerAuth }   
-       
       >
         <Text style={ styles.textButton } > Crear cuenta </Text>
       </Button>
@@ -131,29 +133,17 @@ const SignUp= ({ navigation }) => {
 
       <View style={ styles.containerLink } >
         <Text style={ styles.textAccount } > ¿Ya tienes cuenta? </Text>
-        <Text style={[ styles.textAccount, styles.textAccountLink ]} onPress={() => navigation.navigate("SignIn")  }  > Inicia sesión </Text>
+        <Text style={[ styles.textAccount, styles.textAccountLink ]} onPress={() => navigation.navigate("SignIn")}>  Inicia sesión </Text>
       </View>
 
 
-      <Modal visible={ hasError || isLoading } transparent animationType='fade'>
-        <View style={ styles.overallContainer } >
-          <View style={ styles.modalContainer }>
-            <Text style={ styles.modalTitle } > { error ? error : "Cargando" } </Text>
-              {
-                error 
-                ? (
-                  <Button buttonStyle={ styles.button } disabled={ false } onPress={ onHandlerButtonModal } 
-                  >
-                    <Text style={ styles.textButton } > Ok </Text> 
-                  </Button>
-                )
-                
-                : <ActivityIndicator size="large" color={ theme.colors.primary }   />
-              }
-          </View>
-        </View>
-      </Modal>
-        
+      <LoadingModal 
+        animationType="fade"
+        error={ error }
+        visible={ hasError || isLoading }
+        onHandlerError={ onHandlerButtonModal }
+      />
+
     </View>
   )
 }

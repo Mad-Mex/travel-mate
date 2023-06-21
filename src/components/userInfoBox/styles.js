@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import theme from "../../constants/theme";
+
 
 const styles = StyleSheet.create({
 
@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
         marginHorizontal: 20,
         fontFamily: 'FiraSans-Regular',
         fontSize: 14,
-        color: theme.colors.text
+        color: "#000000"
     },
 
 
@@ -18,16 +18,16 @@ const styles = StyleSheet.create({
         marginHorizontal: 20,
         paddingLeft: 12,
         height: 44,
-        backgroundColor: theme.colors.grayLight,
+        backgroundColor: "#efefef",
         borderBottomWidth: 1,
-        borderBottomColor: theme.colors.black
+        borderBottomColor: "#000000"
     },
 
 
     userName: {
         fontFamily: 'FiraSans-Regular',
         fontSize: 16,
-        color: theme.colors.text
+        color: "#000000"
     }
 });
 

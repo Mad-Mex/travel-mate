@@ -1,7 +1,8 @@
-import React from 'react'
-import { FlatList, Image, ScrollView, Text, View } from 'react-native'
-import { Banner, CardInfo, SearchLocationAndDate } from '../../components'
-import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
+import React, { useState } from 'react'
+import { FlatList, Image, ScrollView, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import { Banner, Button } from '../../components'
+import { InfoLodgingSmallCard } from "../../components/card"
+import { Ionicons, MaterialIcons, MaterialCommunityIcons } from '@expo/vector-icons';
 import {styles} from './styles'
 
 
@@ -81,14 +82,24 @@ const adventures = [
 
 const Home = ({ navigation }) => {
 
+  
   return (
 
     <ScrollView style={ styles.view }>
-      <SearchLocationAndDate />
+
+      <Image 
+        style={ styles.image }
+        source={ require("../../../assets/images/search_location.jpg") }
+      />
+
+      <Button buttonStyle={ styles.button } onPress={ () => navigation.navigate("Search") }>
+        <MaterialIcons name="search" style={ styles.searchIcon} />
+        <Text style={ styles.textButton } > Encuentra tu próximo destino </Text>
+      </Button>
 
       <Text style={ styles.title } > Explora </Text>
 
-      <CardInfo
+      <InfoLodgingSmallCard
         url={ require("../../../assets/images/cottage.jpg") }
         discount= { false }
         discountPercentage= ""
@@ -105,7 +116,7 @@ const Home = ({ navigation }) => {
         <Ionicons name="flame-sharp" style={ styles.flameIcon } />
       </View>
 
-      <CardInfo
+      <InfoLodgingSmallCard
         url={ require("../../../assets/images/la_barranquita.jpg") }
         discount={ true }
         discountPercentage= "20%"
@@ -149,7 +160,7 @@ const Home = ({ navigation }) => {
 
       <Text style={ styles.title } > Relájate en Buenos Aires </Text>
 
-      <CardInfo
+      <InfoLodgingSmallCard
         url={ require("../../../assets/images/hotel_pool_night.jpg") }
         discount={ false }
         discountPercentage= ""
@@ -175,8 +186,8 @@ const Home = ({ navigation }) => {
             />
           )}
         />
-      
-      </View>       
+      </View>
+
     </ScrollView>
   )
 }

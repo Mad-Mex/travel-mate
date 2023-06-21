@@ -1,5 +1,5 @@
-import { StyleSheet } from "react-native";
-import theme from "../../constants/theme";
+import { StyleSheet } from "react-native"
+import { theme  } from "../../constants"
 
 export const styles = StyleSheet.create({
 
@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
         paddingTop: 4,
         paddingLeft: 10,
         height: 80,
-        backgroundColor: theme.colors.grayLight,
+        backgroundColor: theme.colors.gray
     },
 
 

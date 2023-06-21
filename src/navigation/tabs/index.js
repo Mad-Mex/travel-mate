@@ -1,11 +1,10 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import SearchNavigator from "../search";
 import ProfileNavigator from "../profile";
 import HomeNavigator from "../home";
 import TravelsNavigator from "../travels";
 import { Ionicons } from '@expo/vector-icons';
 import { styles } from "./styles";
-import theme from "../../constants/theme";
+import { theme } from "../../constants"
 
 const BottomTab = createBottomTabNavigator()
 
@@ -25,21 +24,7 @@ const TabsNavigator = () => {
             }}  
         
         >
-            <BottomTab.Screen 
-                name="SearchTab" 
-                component={ SearchNavigator } 
-                options={{ 
-                    tabBarLabel: "Búsqueda", 
-                    tabBarIcon: ({ focused }) => (
-                        <Ionicons 
-                            name={ focused ? "search" : "search-outline" } 
-                            style={[ styles.icon,  focused?  styles.iconFocused : styles.iconOutline ]} 
-                        />
-                    )    
-                }}
-                 
-            />
-
+            
             <BottomTab.Screen 
                 name="HomeTab" 
                 component={ HomeNavigator } 

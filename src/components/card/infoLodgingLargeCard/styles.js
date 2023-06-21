@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import theme from "../../constants/theme";
+import { theme } from "../../../constants"
 
 
 export const styles = StyleSheet.create({
@@ -7,7 +7,7 @@ export const styles = StyleSheet.create({
     cardContainer: {
         position: "relative",    
         marginHorizontal: 20,
-        marginBottom: 10,
+        marginBottom: 40,
         width: "auto",
         height: 264,
         borderWidth: 0.7,
@@ -33,7 +33,16 @@ export const styles = StyleSheet.create({
 
     heartIcon: {
         fontSize: 26,
+    },
+
+
+    heartIconOutline: {
         color: theme.colors.white
+    },
+
+
+    heartIconFilled: {
+        color: theme.colors.error
     },
 
 

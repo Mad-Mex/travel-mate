@@ -79,7 +79,6 @@ const authReducer = ( state = initialState , action ) => {
             };
 
 
-
         case CLEAR_ERROR:
             return {
                 ...state,

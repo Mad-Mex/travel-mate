@@ -1,12 +1,13 @@
-import { StyleSheet } from "react-native";
-import theme from "../../constants/theme";
+import { StyleSheet } from "react-native"
+import { theme } from "../../constants"
+
 
 
 export const styles = StyleSheet.create({
 
     view: {
         flex: 1,
-        backgroundColor: "#F5F5F5"
+        backgroundColor: theme.colors.white
     },
 
 
@@ -22,10 +23,10 @@ export const styles = StyleSheet.create({
         alignItems: "center",
         width: 64,
         height: 64,
-        backgroundColor: "#1F3FE9",
+        backgroundColor: theme.colors.primary,
         borderRadius: 8,
 
-        shadowColor: "#1F3FE9",
+        shadowColor: theme.colors.primary,
         shadowOffset: {
 	        width: 0,
 	        height: 8,
@@ -47,7 +48,7 @@ export const styles = StyleSheet.create({
         marginBottom: 14,
         fontFamily: 'FiraSans-Medium',
         fontSize: 22,
-        color: "#1F3FE9"
+        color: theme.colors.primary
     },
 
 
@@ -69,22 +70,22 @@ export const styles = StyleSheet.create({
 
     eyeIcon: {
         fontSize: 24,
-        color: "#1F3FE9"
+        color: theme.colors.black
     },
 
 
     button: {
         marginTop: 20,
-        backgroundColor: "#1F3FE9",
+        backgroundColor: theme.colors.primary,
 
-        shadowColor: "#1F3FE9",
+        shadowColor: theme.colors.primary,
         shadowOffset: {
 	        width: 0,
 	        height: 10,
         },
         shadowOpacity: 0.25 ,
         shadowRadius: 10,
-        elevation: 12,
+        elevation: 12
     },
 
 
@@ -106,7 +107,7 @@ export const styles = StyleSheet.create({
 
     span: {
         fontFamily: 'FiraSans-Regular',
-        color: "#1F3FE9"
+        color: theme.colors.tertiary
     },
 
 
@@ -126,7 +127,7 @@ export const styles = StyleSheet.create({
 
     textAccountLink: {
         fontFamily: 'FiraSans-Medium',
-        color: "#1F3FE9"
+        color: theme.colors.tertiary
     },
 
 
@@ -144,7 +145,7 @@ export const styles = StyleSheet.create({
         width: "70%",
         height: 140,
         paddingVertical: 16,
-        backgroundColor: theme.colors.white,
+        backgroundColor: theme.colors.white ,
         borderRadius: 8
     },
 
@@ -153,19 +154,6 @@ export const styles = StyleSheet.create({
         fontFamily: 'FiraSans-Regular',
         fontSize: 18,
         color: theme.colors.text
-    },
-
-
-    button: {
-        marginTop: 10,
-        backgroundColor: theme.colors.secondary
-    },
-
-
-    textButton: {
-        fontFamily: 'FiraSans-Regular',
-        fontSize: 16,
-        color: theme.colors.white
     }
 
 });

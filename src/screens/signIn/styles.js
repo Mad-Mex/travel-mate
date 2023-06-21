@@ -1,10 +1,11 @@
 import { StyleSheet } from "react-native";
-import theme from "../../constants/theme";
+import { theme } from "../../constants"
+
 
 export const styles = StyleSheet.create({
     view: {
         flex: 1,
-        backgroundColor: "#F5F5F5"
+        backgroundColor: theme.colors.white
     },
 
 
@@ -30,7 +31,7 @@ export const styles = StyleSheet.create({
         position: "absolute",
         top: 14,
         left: 34,
-        fontSize: 26,
+        fontSize: 25,
         color: theme.colors.gray
     },
 
@@ -44,15 +45,14 @@ export const styles = StyleSheet.create({
 
     eyeIcon: {
         fontSize: 24,
-        color: "#1F3FE9"
+        color: theme.colors.black
     },
 
 
     button: {
         marginTop: 20,
-        backgroundColor: "#1F3FE9",
-
-        shadowColor: "#1F3FE9",
+        backgroundColor: theme.colors.primary,
+        shadowColor: theme.colors.primary,
         shadowOffset: {
 	        width: 0,
 	        height: 10,
@@ -86,7 +86,7 @@ export const styles = StyleSheet.create({
 
     textNoAccountLink: {
         fontFamily: 'FiraSans-Medium',
-        color: "#1F3FE9"
+        color: theme.colors.tertiary
     },
 
     overallContainer: {
@@ -112,22 +112,6 @@ export const styles = StyleSheet.create({
         fontFamily: 'FiraSans-Regular',
         fontSize: 18,
         color: theme.colors.text
-    },
-
-
-    button: {
-        marginTop: 10,
-        backgroundColor: theme.colors.secondary
-    },
-
-
-    textButton: {
-        fontFamily: 'FiraSans-Regular',
-        fontSize: 16,
-        color: theme.colors.white
     }
-
-
-    
 
 });

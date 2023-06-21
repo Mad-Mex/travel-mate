@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import theme from "../../constants/theme";
+
 
 
 export const styles = StyleSheet.create({
@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
         flexDirection: "row",
         width: "100%",
         height: 180,
-        backgroundColor: theme.colors.white
+        backgroundColor: "fff"
     },
 
 
@@ -22,7 +22,7 @@ export const styles = StyleSheet.create({
 
     iconUser: {
         fontSize: 84,
-        color: theme.colors.text
+        color: "#000000"
     },
 
 
@@ -37,7 +37,7 @@ export const styles = StyleSheet.create({
         marginLeft: 10,
         fontFamily: 'FiraSans-Regular',
         fontSize: 23,
-        color: theme.colors.text
+        color: "#000000"
     },
 
 
@@ -46,7 +46,7 @@ export const styles = StyleSheet.create({
         marginLeft: 12,
         fontFamily: 'FiraSans-Light',
         fontSize: 16,
-        color: theme.colors.text
+        color: "#000000"
     },
 
 
@@ -60,7 +60,7 @@ export const styles = StyleSheet.create({
         marginBottom: 16,
         width: "86%",
         borderBottomWidth: 0.5,
-        borderBottomColor: theme.colors.gray
+        borderBottomColor: "#efefef"
     },
 
 
@@ -73,13 +73,13 @@ export const styles = StyleSheet.create({
     category: {
         fontFamily: 'FiraSans-Medium',
         fontSize: 13,
-        color: theme.colors.textUnderscore
+        color: "blue"
     },
 
 
     number: {
         fontFamily: 'FiraSans-Light',
         fontSize: 14,
-        color: theme.colors.text
+        color: "#000000"
     }
 })

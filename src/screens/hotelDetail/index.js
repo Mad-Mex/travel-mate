@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import { FlatList, Image, Pressable, ScrollView, Text, TouchableOpacity, View } from "react-native"
 import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
-import { ServicesModal } from "../../components";
 import { basicServices } from "../../constants";
 import { styles } from "./styles";
 
@@ -119,17 +118,7 @@ const HotelDetail = ({ navigation }) => {
                 de la fecha de </Text>
                 <Text style={ [styles.cancellation, styles.marginBottom ] } > tu reservación </Text>
             </>
-
-
-            { isModalVisible && 
-                <ServicesModal 
-                    isVisible= { isModalVisible }
-                    animationType="slide"
-                    onCancel={() => setIsModalVisible(false) }
-                /> 
-            }
-
-            
+ 
         </ScrollView>    
     )
 }   

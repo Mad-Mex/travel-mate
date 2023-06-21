@@ -1,5 +1,4 @@
 import { StyleSheet } from "react-native";
-import theme from "../../constants/theme";
 
 export const styles = StyleSheet.create({
 
@@ -8,7 +7,7 @@ export const styles = StyleSheet.create({
         marginTop: 16,
         width: "100%",
         height: 104,
-        backgroundColor: theme.colors.white
+        backgroundColor: "#fff"
     },
 
 
@@ -30,7 +29,7 @@ export const styles = StyleSheet.create({
         marginLeft: 4,
         fontFamily: 'FiraSans-Medium',
         fontSize: 20,
-        color: theme.colors.text
+        color: "#000000"
     },
 
 
@@ -38,12 +37,12 @@ export const styles = StyleSheet.create({
         marginLeft: 6,
         fontFamily: 'FiraSans-Regular',
         fontSize: 13,
-        color: theme.colors.text
+        color: "#000000"
     },
 
 
     icon: {
         fontSize: 32,
-        color: theme.colors.text
+        color: "#000000"
     }
 });

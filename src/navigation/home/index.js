@@ -1,5 +1,5 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { Home } from "../../screens";
+import { Home, Maps, SearchResults, HotelDetail, Search  } from "../../screens";
 import { HeaderTitleHome } from "../../components";
 
 
@@ -15,6 +15,10 @@ const HomeNavigator = () => {
                 component={ Home } 
                 options={{ headerTitle: (props) => <HeaderTitleHome {...props} /> }} 
             />   
+            <Stack.Screen name="Search" component={ Search } options={{ title: "Búsqueda" }}   />
+            <Stack.Screen name="Maps" component={ Maps } options={{ title: "" }} /> 
+            <Stack.Screen name="SearchResults" component={ SearchResults } options={{ title: "Resultados" }}/>
+            <Stack.Screen name="HotelDetail" component={ HotelDetail }  options={{ title: "" }} />   
         </Stack.Navigator>
     )
 }

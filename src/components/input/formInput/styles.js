@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import theme from "../../constants/theme";
+import { theme } from "../../../constants"
 
 const styles= StyleSheet.create({
 
@@ -19,7 +19,7 @@ const styles= StyleSheet.create({
     
 
     placeholderTextColor: {
-        color: theme.colors.text
+        color: theme.colors.gray
     },    
 
 
@@ -33,7 +33,7 @@ const styles= StyleSheet.create({
         marginLeft: 17,
         fontFamily: 'FiraSans-Regular',
         fontSize: 12,
-        color: theme.colors.primary
+        color: theme.colors.error
     }
 });
 

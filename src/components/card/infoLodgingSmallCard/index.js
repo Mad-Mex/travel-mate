@@ -4,7 +4,7 @@ import { AntDesign } from '@expo/vector-icons';
 import { styles } from './styles'
 
 
-const CardInfo = ({ url, discount, discountPercentage,  lodging, hotelName, city, previousPrice, price  }) => {
+const InfoLodgingSmallCard = ({ url, discount, discountPercentage,  lodging, hotelName, city, previousPrice, price  }) => {
 
   const [liked, setLiked] = useState(false)
 
@@ -39,4 +39,4 @@ const CardInfo = ({ url, discount, discountPercentage,  lodging, hotelName, city
   )
 }
 
-export default CardInfo
+export default InfoLodgingSmallCard

@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import theme from "../../constants/theme";
+
 
 export const styles = StyleSheet.create({
 
@@ -13,7 +13,7 @@ export const styles = StyleSheet.create({
     textLogo:{
         fontFamily: 'FiraSans-Medium',
         fontSize: 20,
-        color: theme.colors.text
+        color: "#000000"
     },
 
 
@@ -24,7 +24,7 @@ export const styles = StyleSheet.create({
 
     icon:{
         fontSize: 26,
-        color: theme.colors.text
+        color: "#000000"
     },
 
     notificationContainer: {
@@ -35,7 +35,7 @@ export const styles = StyleSheet.create({
         alignItems: "center",
         width: 18,
         height: 18,
-        backgroundColor: theme.colors.primary,
+        backgroundColor: "blue",
         borderRadius: 18/ 2 
     },
 
@@ -43,7 +43,7 @@ export const styles = StyleSheet.create({
     textNotification: {
         fontFamily: 'FiraSans-Regular',
         fontSize: 13,
-        color: theme.colors.white
+        color: "#fff"
     }
 
 });

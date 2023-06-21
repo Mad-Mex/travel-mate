@@ -1,46 +1,41 @@
 import React from 'react'
-import {  Image, ScrollView, Text, View } from "react-native"
-import { Ionicons } from '@expo/vector-icons'
+import { FlatList, Text, View } from "react-native"
+import { InfoLodgingLargeCard } from "../../components/card"
 import { styles } from './styles'
-import { CardInfoLodgingLarge } from '../../components'
+
 
 
 const SearchResults = ({ navigation, route }) => {
 
-  const { item  } = route.params
+  const { data, city } = route.params
   
- 
+
   return (
 
-   <ScrollView style={ styles.view } >    
+   <View style={ styles.view } >
 
-    <View style={ styles.infoSearchContainer } >
-      <View style={ styles.flexContainer } >
-        <Ionicons name="calendar" style={ styles.icon }  />
-        <Text style={ styles.textIcon } > 25 - 26 May </Text>
-      </View>
+    <FlatList
+      data={ data }
+      ListHeaderComponent={(
+        <Text style={ styles.title } > { city } </Text> 
+      )}
+      
+      keyExtractor={ item => item.id}
+      renderItem={({ item }) => (
+        
+        <InfoLodgingLargeCard 
+          url={ item.image }
+          lodging={ item.lodging }
+          hotelName={ item.hotelName }
+          rankingText="8.5 - Muy bien"
+          reviewNumber="250"
+          price= { item.price }
+          navigation={ navigation }
+        />
+      )}
+    />    
 
-      <View style={ styles.divider } ></View>
-
-      <View style={ styles.flexContainer } >
-        <Ionicons name="person" style={ styles.icon }  />
-        <Text style={ styles.textIcon } > 1 huésped </Text>
-      </View>  
-    </View>
-
-    <Text style={ styles.title } > Resultados </Text> 
-
-    <CardInfoLodgingLarge 
-      url={ require("../../../assets/images/house_indoor_5.jpg") }
-       lodging="Casa - pareja"
-       hotelName="Casa Roma Azulejos"
-       rankingText="8.5 - Muy bien"
-       reviewNumber="250"
-       price= "40"
-       navigation={ navigation }
-    />
-
-   </ScrollView>
+   </View>
   )
 }
 

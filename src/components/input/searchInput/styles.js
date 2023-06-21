@@ -1,38 +1,31 @@
 import { StyleSheet } from "react-native";
-import theme from "../../constants/theme";
+import { theme } from "../../../constants"
 
 export const styles = StyleSheet.create({
-
     
-
     input: {
         position: "relative",
         marginHorizontal: 20, 
-        paddingLeft: 54,
+        paddingLeft: 52,
         width: "auto",
         height: 44,
+        fontFamily: 'FiraSans-Regular',
+        color: theme.colors.text,
+        fontSize: 16,
         borderWidth: 2,
         borderColor: theme.colors.accent2,
         borderRadius: 44 / 2,
     },
 
-
-    closeIcon: {
+    closeIconContainer: {
         position: "absolute",
-        top: 52,
-        right: 40,
-        fontSize: 20,
-        color: theme.colors.text
+        top: 34,
+        right: 38,
     },
 
-
-    searchIcon: {
-        position: "absolute",
-        top: 50,
-        left: 36,
-        zIndex: 10,
-        marginRight: 16,
-        fontSize: 22,
+    closeIcon: {
+        fontSize: 20,
         color: theme.colors.black
     }
-});
+    
+})
