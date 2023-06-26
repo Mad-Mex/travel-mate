@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import MapView, { Marker } from 'react-native-maps'
-import { URL_GEOCODING } from '../../constants/maps'
+import { URL_REVERSE_GEOCODING } from '../../constants/maps'
 import { styles } from './styles'
 
 
 const Maps = ({ route }) => {
 
-    const { coords } = route.params
+    const { location } = route.params
     const [newAddress, setNewAddress] = useState(null)
     const [selectedLocation, setSelectedLocation] = useState(null)
   
     const initialRegion = {
-      latitude: coords?.lat,
-      longitude: coords?.lng,
+      latitude: location?.lat,
+      longitude: location?.lng,
       latitudeDelta: 0.0922,
       longitudeDelta: 0.0421
     }
@@ -20,7 +20,7 @@ const Maps = ({ route }) => {
   
     useEffect(() => {
       const geocodeLocation = async () => {
-        const response = await fetch(URL_GEOCODING(coords.lat, coords.lng))
+        const response = await fetch(URL_REVERSE_GEOCODING(location.lat, location.lng))
   
         if( !response.ok ) {
           return console.log("Algo salió mal");
@@ -37,7 +37,6 @@ const Maps = ({ route }) => {
       }
   
       geocodeLocation()
-    
     }, [])
   
   
@@ -60,7 +59,6 @@ const Maps = ({ route }) => {
 
     { 
       selectedLocation 
-
       ? (
         <Marker 
           title='Ubicación seleccionada'

@@ -15,6 +15,6 @@ export const getLodgingByCity = ( city ) => {
                 reject(console.log("No se pudieron obtener los resultados"))
             }
             
-        }, 2500);
+        }, 3000);
     })
 }

@@ -14,7 +14,7 @@ export const styles = StyleSheet.create({
     title: {
         marginTop: 20,
         marginBottom: 24,
-        marginHorizontal: 20,
+        marginLeft: 12,
         fontFamily: 'FiraSans-Medium',
         fontSize: 28,
         color: theme.colors.text

@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { theme  } from "../../../constants"
+import { theme } from "../../constants"
 
 
 export const styles = StyleSheet.create({
@@ -15,7 +15,7 @@ export const styles = StyleSheet.create({
     modalContainer: {
         justifyContent: "space-between",
         alignItems: "center",
-         paddingVertical: 16,
+        paddingVertical: 16,
         width: "70%",
         height: 140,
         borderRadius: 8,

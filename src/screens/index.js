@@ -7,5 +7,6 @@ export { default as Search } from "./search";
 export { default as Maps } from "./maps";
 export { default as SearchResults } from "./searchResults";
 export { default as HotelDetail } from "./hotelDetail";
+export { default as Booking } from "./booking";
 export { default as Profile } from "./profile";
 export { default as Travels } from "./travels";

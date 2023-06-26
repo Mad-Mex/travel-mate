@@ -2,25 +2,20 @@ import React, { useState } from 'react'
 import { Image , Pressable, Text, TouchableOpacity, View } from "react-native"
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { styles } from './styles'
+import { useNavigation } from '@react-navigation/native';
 
-const InfoLodgingLargeCard = ({ 
-  url, 
-  lodging, 
-  hotelName, 
-  rankingText, 
-  reviewNumber, 
-  price, 
-  navigation }) => {
+const InfoLodgingLargeCard = ({ search }) => {
 
-
+  const { hotelName, hotelImage, typeOfLodging, ranking, numberOfReviews, price, discount, discountPercentage } = search
   const [liked, setLiked] = useState(false)
+  const navigation = useNavigation()
 
   
   return (
     
-    <TouchableOpacity style={ styles.cardContainer } onPress={ ()=> navigation.navigate("HotelDetail") } >
+    <TouchableOpacity style={ styles.cardContainer } onPress={ ()=> navigation.navigate("HotelDetail", { search } ) } >
 
-      <Image source={ url } style={ styles.cardImage } />
+      <Image source={ hotelImage } style={ styles.cardImage } />
       <Pressable style={ styles.heartContainer } onPress={() => setLiked(!liked)  } >
         <MaterialCommunityIcons 
           name={ liked ? "cards-heart" : "cards-heart-outline" }
@@ -30,13 +25,13 @@ const InfoLodgingLargeCard = ({
       <View style={ styles.contentContainer }  >
 
         <View style={ styles.lodgingContainer }  >
-          <Text style={ styles.lodging } > { lodging } </Text>
+          <Text style={ styles.lodging } > { typeOfLodging } </Text>
           <Text style={ styles.hotelName } > { hotelName } </Text>
           <View style={ styles.flexContainer } >
             <View style={ styles.labelRankingContainer } >
-              <Text style={ styles.rankingText } > { rankingText } </Text> 
+              <Text style={ styles.rankingText } > { ranking } </Text> 
             </View>
-            <Text style={ styles.reviewNumber } > { `${ reviewNumber} evaluaciones` } </Text>
+            <Text style={ styles.reviewNumber } > { `${ numberOfReviews } evaluaciones` } </Text>
           </View>
         </View>
 

@@ -1,11 +1,23 @@
+import React, { useLayoutEffect } from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { Home, Maps, SearchResults, HotelDetail, Search  } from "../../screens";
+import { getFocusedRouteNameFromRoute } from "@react-navigation/native";
+import { Home, Maps, SearchResults, Search, HotelDetail, Booking,  } from "../../screens";
 import { HeaderTitleHome } from "../../components";
 
 
 const Stack = createNativeStackNavigator()
 
-const HomeNavigator = () => {
+const HomeNavigator = ({ navigation, route }) => {
+
+    useLayoutEffect(() => {
+        const routeName = ["SearchResults", "HotelDetail"]
+        if(routeName.includes(getFocusedRouteNameFromRoute(route)) ){
+            navigation.setOptions({ tabBarStyle: { display: "none" } })
+        }else {
+            navigation.setOptions({ tabBarStyle: { display: "flex" }  })
+        }
+        
+    }, [navigation, route])
 
     return(
 
@@ -18,7 +30,8 @@ const HomeNavigator = () => {
             <Stack.Screen name="Search" component={ Search } options={{ title: "Búsqueda" }}   />
             <Stack.Screen name="Maps" component={ Maps } options={{ title: "" }} /> 
             <Stack.Screen name="SearchResults" component={ SearchResults } options={{ title: "Resultados" }}/>
-            <Stack.Screen name="HotelDetail" component={ HotelDetail }  options={{ title: "" }} />   
+            <Stack.Screen name="HotelDetail" component={ HotelDetail } options={{ title: "Detalle"  }}  />
+            <Stack.Screen name="Booking" component={ Booking } options={{ title: "Reservación" }}  />
         </Stack.Navigator>
     )
 }

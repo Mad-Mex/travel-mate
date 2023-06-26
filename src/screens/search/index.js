@@ -1,12 +1,12 @@
 import React, {  useEffect, useState }  from 'react'
 import { ScrollView, Text, TouchableOpacity } from "react-native"
-import { Calendar, LocaleConfig } from 'react-native-calendars'
-import { Button, Counter, SearchContainerFolded  } from "../../components"
+import { Button, CalendarDate, Counter, SearchContainerFolded  } from "../../components"
 import { SearchInput } from "../../components/input"
-import { LoadingModal } from "../../components/modal"
+import { LoadingModal } from "../../modal"
+import { useDispatch } from 'react-redux'
+import { booking } from "../../store/actions"
 import { getLodgingByCity  } from "../../utils"
 import { styles } from './styles'
-
 
 
 const Search = ({ navigation }) => {
@@ -19,33 +19,20 @@ const Search = ({ navigation }) => {
   const [isDateFolded, setIsDateFolded] = useState(true)
   const [isGuestFolded, setIsGuestFolded] = useState(true)
 
-
   const [isMainButtonDisabled, setIsMainButtonDisabled] = useState(true)
-  const [selected, setSelected] = useState("")
-
   const [error, setError] = useState("")
   const [hasError, setHasError] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
-  const currentDay = new Date().toDateString()
 
+  const [selected, setSelected] = useState("")
 
-  LocaleConfig.locales['es'] = {
-    monthNames: ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio', 'Agosto','Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
-    monthNamesShort: ['Ene.', 'Feb.', 'Mar.','Abr.', 'May.', 'Jun.', 'Jul.', 'Ago.', 'Sep.','Oct.', 'Nov.', 'Dic.'],
-    dayNames: ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado','Domingo'],
-    dayNamesShort: ['Do.', 'Lu.', 'Ma.', 'Mi.', 'Ju.', 'Vi.', 'Sa.'],
-    today: 'Hoy'
-  };
+  const dispatch = useDispatch()
   
-  LocaleConfig.defaultLocale= 'es';
-
-
   useEffect(() => {
     if( inputLocation !== "" && inputDate !== "" ){
       setIsMainButtonDisabled(false)
     }
   }, [inputLocation, inputDate ])
-
 
   const onHandlerButtonModal = () => {
     setError("")
@@ -53,7 +40,7 @@ const Search = ({ navigation }) => {
   }
   
 
-  
+
   return (
 
     <ScrollView style={ styles.view } >
@@ -83,30 +70,23 @@ const Search = ({ navigation }) => {
       }
 
 
-
       {
         !isDateFolded
         ? (
             <TouchableOpacity style={ styles.searchContainer }   >
               <Text style={ styles.title }> Elige una fecha </Text>
-  
-              <Calendar 
-                initialDate={ currentDay }
-                minDate={ currentDay }
-                disableAllTouchEventsForDisabledDays={ true }
-                markingType="custom"
-                onDayPress={ day => setSelected(day.dateString) }
-                markedDates={{
-                  [selected]: { selected: true, disableTouchEvent: true, selectedColor: "blue" }
-                }}
-                style={ styles.calendar } 
+
+              <CalendarDate 
+                calendarStyle={ styles.calendar }
+                selected={ selected }
+                onSelect={ setSelected } 
               />
   
               <Button 
                 buttonStyle={ styles.button } 
                 disabled={ selected == "" ? true : false }  
                 onPress={ () => {
-                  setInputDate( selected.slice(5) )
+                  setInputDate( selected )
                   setIsDateFolded(true)
                 }}
               >
@@ -122,7 +102,6 @@ const Search = ({ navigation }) => {
               />
             )
       }
-
 
 
       {
@@ -156,18 +135,14 @@ const Search = ({ navigation }) => {
         disabled={ isMainButtonDisabled }
         onPress={ () => {
           
-          const newSearch = {
-            location: inputLocation,
-            date: inputDate,
-            numberOfGuests: inputGuest
-          }
-
+          dispatch( booking({ date: inputDate, guest: inputGuest }))
+          
           setIsLoading(true)
 
           getLodgingByCity( inputLocation )
             .then( result => {
               setIsLoading(false)
-              navigation.navigate("SearchResults", { data: result[0].places, city: inputLocation })
+              navigation.navigate("SearchResults", { search: result[0].places, city: inputLocation })
             })
             .catch( error =>{
               setHasError(true)

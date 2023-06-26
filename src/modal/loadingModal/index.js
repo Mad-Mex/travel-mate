@@ -1,6 +1,6 @@
 import React from 'react'
 import {  ActivityIndicator, Button, Modal, Text, View } from 'react-native'
-import { theme } from "../../../constants"
+import { theme } from "../../constants"
 import { styles } from './styles'
 
 
@@ -26,7 +26,6 @@ const LoadingModal = ({ visible, animationType, error, onHandlerError  }) => {
           </View>
         </View>
       </Modal>
-
   )
 }
 

@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import { theme } from "../../constants"
 
 
 
@@ -6,7 +7,7 @@ export const styles = StyleSheet.create({
 
     view: {
         flex: 1,
-        backgroundColor: "#fff"
+        backgroundColor: theme.colors.white
     },
 
     imageContainer: {
@@ -40,12 +41,12 @@ export const styles = StyleSheet.create({
 
 
     iconColor: { 
-        color: "#fff"
+        color: theme.colors.white
     },
 
 
     iconColorFulfilled: {
-        color: "orange"
+        color: theme.colors.error
     },
 
 
@@ -54,7 +55,7 @@ export const styles = StyleSheet.create({
         marginLeft: 20,
         fontFamily: 'FiraSans-Regular',
         fontSize: 14,
-        color: "#000000"
+        color: theme.colors.text
     },
 
 
@@ -62,16 +63,7 @@ export const styles = StyleSheet.create({
         marginLeft: 17,
         fontFamily: 'FiraSans-SemiBold',
         fontSize: 24,
-        color: "#000000"
-    },
-
-
-    hotelCity: {
-        marginLeft: 20,
-        marginBottom: 12,
-        fontFamily: 'FiraSans-Light',
-        fontSize: 14,
-        color: "#000000"
+        color: theme.colors.text
     },
 
 
@@ -89,38 +81,29 @@ export const styles = StyleSheet.create({
         marginRight: 12,
         width: 120,
         height: 30,
-        backgroundColor: "green"
+        backgroundColor: theme.colors.success
     },
 
 
     ranking: {
         fontFamily: 'FiraSans-Regular',
         fontSize: 14,
-        color: "#fff"
+        color: theme.colors.white
     },
 
 
     numberReview: {
         fontFamily: 'FiraSans-Regular',
         fontSize: 14,
-        color: "#000000"
+        color: theme.colors.text
     },
 
 
     divider: {
         marginHorizontal: 20,
         width: "auto",
-        borderWidth: 0.5,
-        borderColor: "#efefef"
-    },
-
-
-    hotelDetails: {
-        marginTop: 16,
-        marginLeft: 18, 
-        fontFamily: 'FiraSans-Medium',
-        fontSize: 15,
-        color: "#000000"
+        borderWidth: 0.2,
+        borderColor: theme.colors.gray
     },
 
 
@@ -130,7 +113,12 @@ export const styles = StyleSheet.create({
         marginBottom: 10,
         fontFamily: 'FiraSans-Medium',
         fontSize: 18,
-        color: "#000000"
+        color: theme.colors.text
+    },
+
+
+    descriptionContainer: {
+        marginBottom: 20
     },
 
 
@@ -138,7 +126,7 @@ export const styles = StyleSheet.create({
         marginHorizontal: 18,
         fontFamily: 'FiraSans-Regular',
         fontSize: 14,
-        color: "#000000"
+        color: theme.colors.text
     },
 
 
@@ -153,7 +141,7 @@ export const styles = StyleSheet.create({
     icon: {
         marginRight: 16,
         fontSize: 28,
-        color: "#000000"
+        color: theme.colors.black
     },
 
 
@@ -161,14 +149,14 @@ export const styles = StyleSheet.create({
         marginBottom: 2,
         fontFamily: 'FiraSans-Medium',
         fontSize: 16,
-        color: "#000000"
+        color: theme.colors.text
     },
 
 
     featureSubtitle: {
         fontFamily: 'FiraSans-Regular',
         fontSize: 13,
-        color: "#000000"
+        color: theme.colors.text
     },
 
 
@@ -205,43 +193,17 @@ export const styles = StyleSheet.create({
     serviceIcon: {
         marginRight: 6,
         fontSize: 26,
-        color: "#000000"
+        color: theme.colors.black
     },
 
 
     textIcon: {
         fontFamily: 'FiraSans-Regular',
         fontSize: 15,
-        color: "#000000"
+        color: theme.colors.text
     },
 
-
-    littleButtonContainer:{
-        justifyContent: "center",
-        alignItems: "center",
-        marginBottom: 30
-    },
-
-
-    littleButton: {
-        justifyContent: "center",
-        alignItems: "center",
-        width: 220,
-        height: 44,
-        borderWidth: 1,
-        borderColor: "#1F3FE9",
-        borderRadius: 48/2,
-        backgroundColor: "#fff"
-    },
-
-
-    textButton: {
-        fontFamily: 'FiraSans-Regular',
-        fontSize: 18,
-        color: "#1F3FE9"
-    },
-
-
+    
     imageLocation: {    
         marginTop: 22,
         marginHorizontal: 20,
@@ -261,12 +223,44 @@ export const styles = StyleSheet.create({
         marginHorizontal: 20,
         fontFamily: 'FiraSans-Regular',
         fontSize: 14,
-        color: "#000000"
+        color: theme.colors.text
     },
 
 
     span: {
         fontFamily: 'FiraSans-SemiBold'
+    },
+
+
+    bookingContainer: {
+        width: "100%",
+        height: 130, 
+        borderWidth: 1,
+        borderColor: theme.colors.gray,
+        backgroundColor: theme.colors.white,
+        zIndex: 10
+    },
+
+
+    bookingPrice: {
+        marginTop: 12,
+        marginBottom: 16,
+        marginLeft: 20,
+        fontFamily: 'FiraSans-Bold',
+        fontSize: 20,
+        color: theme.colors.text
+    },
+
+
+    bookingButton: {
+        backgroundColor: theme.colors.primary
+    },
+
+
+    bookingTextButton:{
+        fontFamily: 'FiraSans-Regular',
+        fontSize: 18,
+        color: theme.colors.white
     }
 
 

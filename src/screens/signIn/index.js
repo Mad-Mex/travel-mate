@@ -2,7 +2,7 @@ import React, { useReducer, useState } from 'react'
 import { Pressable, Text, View } from "react-native"
 import { Button, Label } from "../../components"
 import { FormInput } from "../../components/input"
-import { LoadingModal } from "../../components/modal"
+import { LoadingModal } from "../../modal"
 import { clearError, signIn } from '../../store/actions';
 import { UPDATE_FORM, onInputChange } from '../../utils/validateForm';
 import { useDispatch, useSelector } from 'react-redux';
