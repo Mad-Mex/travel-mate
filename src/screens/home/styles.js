@@ -1,7 +1,6 @@
 import { StyleSheet } from "react-native";
 import { theme } from "../../constants"
 
-
 export const styles = StyleSheet.create({
 
     view: {
@@ -28,9 +27,10 @@ export const styles = StyleSheet.create({
 
     textButton: {
         fontFamily: 'FiraSans-Regular',
-        fontSize: 16,
+        fontSize: 17,
         color: theme.colors.gray
     },
+
 
     image: {
         position: "absolute",
@@ -40,35 +40,9 @@ export const styles = StyleSheet.create({
         height: 120
     },
 
-    searchContainer: {
-        marginTop: 26,
-        marginHorizontal: 20,
-        width: "auto",
-        height: 280,
-        backgroundColor: theme.colors.white,
-        borderRadius: 12,
-    },
-
-    searchButton: {
-        justifyContent: "center",
-        alignItems: "center",
-        marginTop: 24,
-        marginHorizontal: 20,
-        width: "auto",
-        height: 40,
-        backgroundColor: theme.colors.black,
-        borderRadius: 40/2
-    },
-
-
-    searchButtonText: {
-        fontSize: 18,
-        color: theme.colors.white
-    },
-
 
     title: {
-        marginTop: 46,
+        marginTop: 60,
         marginBottom: 20,
         marginLeft: 16,
         fontFamily: 'FiraSans-Medium',
@@ -76,59 +50,9 @@ export const styles = StyleSheet.create({
         color: theme.colors.text
     },
 
-    containerFlexRow: {
-        flexDirection: "row",
-        alignItems: "center"
-    },
-
-  
-    flameIcon: {
-        marginLeft: 8,
-        fontSize: 22,
-        color: theme.colors.primary
-    },
-
-
-    listContainer: {
-        marginHorizontal: 12,
-    },
-
-
-    containerFlexRow2: {
-        alignItems: "center",
-        width: 80
-    },
-
     
-    containerIcon: {
-        marginBottom: 10,
-        justifyContent: "center",
-        alignItems: "center",
-        width: 48,
-        height: 48,
-        borderWidth: 1,
-        borderColor: theme.colors.tertiary,
-        borderRadius: 48 / 2
-    },
-
-
-    lodgingIcon: {
-        fontSize: 23,
-        color: theme.colors.tertiary
-    },
-
-
-    category:{
-
-        fontFamily: 'FiraSans-SemiBold',
-        fontSize: 16,
-        color: theme.colors.tertiary
-    },
-
-
     imageContainer: {
-        marginHorizontal: 20,
-        marginBottom: 40,
+        marginHorizontal: 20
     },
 
 
@@ -138,5 +62,8 @@ export const styles = StyleSheet.create({
         height: 130,
         borderRadius: 8
     }
+
+
+    
 });
 

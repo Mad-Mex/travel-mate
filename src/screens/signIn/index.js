@@ -120,7 +120,6 @@ const SignIn = ({ navigation }) => {
         <Text style={ styles.textButton } > Iniciar sesión </Text>
       </Button>
       
-
       <View style={ styles.containerLink } > 
         <Text style={ styles.textNoAccount } > ¿ Aún no tienes cuenta ? </Text>
         <Text style={[ styles.textNoAccount, styles.textNoAccountLink ]} onPress={() => navigation.navigate("SignUp")  }   > Regístrate </Text>
@@ -129,10 +128,11 @@ const SignIn = ({ navigation }) => {
 
       <LoadingModal 
         animationType="fade"
-         error={ error }
-        visible={ hasError || isLoading }
-        onHandlerError={ onHandlerButtonModal }
+        error={ error }
+        isVisible={ hasError || isLoading }
+        onClose={ onHandlerButtonModal }
       />
+    
     </View>
   )
 }

@@ -2,7 +2,6 @@ import { StyleSheet } from "react-native"
 import { theme } from "../../constants"
 
 
-
 export const styles = StyleSheet.create({
 
     view: {
@@ -38,8 +37,8 @@ export const styles = StyleSheet.create({
 
 
     logoIcon: {
-        fontSize: 34,
-        color: theme.colors.white
+        width: 35,
+        height: 35
     },
 
 
@@ -90,8 +89,8 @@ export const styles = StyleSheet.create({
 
 
     textButton: {
-        fontFamily: 'FiraSans-Medium',
-        fontSize: 18,
+        fontFamily: 'FiraSans-Regular',
+        fontSize: 19,
         color: theme.colors.white
     },
 
@@ -128,33 +127,6 @@ export const styles = StyleSheet.create({
     textAccountLink: {
         fontFamily: 'FiraSans-Medium',
         color: theme.colors.tertiary
-    },
-
-
-    overallContainer: {
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "rgba(0,0,0,0.5)"
-    },
-
-
-    modalContainer: {
-        justifyContent: "space-between",
-        alignItems: "center",
-        width: "70%",
-        height: 140,
-        paddingVertical: 16,
-        backgroundColor: theme.colors.white ,
-        borderRadius: 8
-    },
-
-
-    modalTitle: {
-        fontFamily: 'FiraSans-Regular',
-        fontSize: 18,
-        color: theme.colors.text
     }
-
-});
+})
 

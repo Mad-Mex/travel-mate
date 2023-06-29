@@ -1,9 +1,7 @@
 import { StyleSheet } from "react-native";
 import { theme } from "../../../constants"
 
-const styles= StyleSheet.create({
-
-    
+export const styles= StyleSheet.create({
 
     input: {
         position: "relative",
@@ -35,6 +33,4 @@ const styles= StyleSheet.create({
         fontSize: 12,
         color: theme.colors.error
     }
-});
-
-export default styles;
+})

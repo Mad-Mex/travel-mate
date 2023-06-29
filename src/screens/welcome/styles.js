@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native"
 import { theme } from "../../constants"
 
 
-const styles = StyleSheet.create({
+export const styles = StyleSheet.create({
     imageBackground: {
         width: "100%",
         height: "100%"
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
 
     signUpText:{
         fontFamily: 'FiraSans-Regular',
-        fontSize: 18,
+        fontSize: 19,
         color: theme.colors.white
     },
 
@@ -53,10 +53,8 @@ const styles = StyleSheet.create({
 
 
     signInText:{
-        fontFamily: 'FiraSans-Regular',
-        fontSize: 18,
+        fontFamily: 'FiraSans-Medium',
+        fontSize: 19,
         color: theme.colors.text
     }
 });
-
-export default styles

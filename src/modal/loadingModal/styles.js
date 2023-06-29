@@ -1,9 +1,8 @@
 import { StyleSheet } from "react-native";
 import { theme } from "../../constants"
 
-
 export const styles = StyleSheet.create({
-    
+
     overallContainer: {
         flex: 1,
         justifyContent: "center",
@@ -15,11 +14,11 @@ export const styles = StyleSheet.create({
     modalContainer: {
         justifyContent: "space-between",
         alignItems: "center",
-        paddingVertical: 16,
         width: "70%",
-        height: 140,
-        borderRadius: 8,
-        backgroundColor: theme.colors.white 
+        height: 120,
+        paddingVertical: 16,
+        backgroundColor: theme.colors.white,
+        borderRadius: 8
     },
 
 
@@ -28,5 +27,4 @@ export const styles = StyleSheet.create({
         fontSize: 18,
         color: theme.colors.text
     }
-
 })

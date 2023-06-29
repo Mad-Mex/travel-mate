@@ -1,5 +1,4 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import ProfileNavigator from "../profile";
 import HomeNavigator from "../home";
 import TravelsNavigator from "../travels";
 import { Ionicons } from '@expo/vector-icons';
@@ -22,7 +21,6 @@ const TabsNavigator = () => {
                 tabBarActiveTintColor: theme.colors.primary,
                 tabBarInactiveTintColor: theme.colors.gray,
             }}  
-        
         >
             
             <BottomTab.Screen 
@@ -36,10 +34,9 @@ const TabsNavigator = () => {
                             style={[ styles.icon,  focused?  styles.iconFocused : styles.iconOutline ]} 
                         />
                     )        
-                
                 }} 
-                 
             />
+
 
             <BottomTab.Screen 
                 name="TravelsTab" 
@@ -51,26 +48,9 @@ const TabsNavigator = () => {
                             name={ focused ? "briefcase" : "briefcase-outline" } 
                             style={[ styles.icon,  focused?  styles.iconFocused : styles.iconOutline ]} 
                         />
-                    )    
-                
+                    )                    
                 }}  
             />
-
-            <BottomTab.Screen 
-                name="ProfileTab" 
-                component={ ProfileNavigator } 
-                options={{ 
-                    tabBarLabel: "Perfil", 
-                    tabBarIcon: ({ focused }) => (
-                        <Ionicons 
-                            name={ focused ? "person" : "person-outline" } 
-                            style={[ styles.icon,  focused?  styles.iconFocused : styles.iconOutline ]} 
-                        />
-                    )    
-                
-                }}  
-            />
-
         </BottomTab.Navigator>
     )
 }

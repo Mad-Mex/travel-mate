@@ -1,5 +1,7 @@
-export const MAPS_API_KEY= ""
+import { MAPS_API } from "@env"
 
+
+export const MAPS_API_KEY= MAPS_API
 
 export const URL_MAPS = ( lat, lng, zoom = 12 ) => 
 	`https://maps.googleapis.com/maps/api/staticmap?center=${lat},${lng}&zoom=${zoom}&size=600x300&maptype=roadmap

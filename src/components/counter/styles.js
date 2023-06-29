@@ -1,6 +1,7 @@
 import { StyleSheet } from "react-native";
 import { theme } from "../../constants"
 
+
 export const styles = StyleSheet.create({
 
     lodgingContainer: {
@@ -50,6 +51,4 @@ export const styles = StyleSheet.create({
         fontSize: 22,
         color: theme.colors.text
     }
-
-
-});
+})

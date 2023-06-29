@@ -25,7 +25,6 @@ const Search = ({ navigation }) => {
   const [isLoading, setIsLoading] = useState(false)
 
   const [selected, setSelected] = useState("")
-
   const dispatch = useDispatch()
   
   useEffect(() => {
@@ -40,16 +39,17 @@ const Search = ({ navigation }) => {
   }
   
 
-
   return (
 
     <ScrollView style={ styles.view } >
+
+      <Text style={ styles.mainTitle } > Encuenta tu próximo destino </Text>
 
       {
         !isLocationFolded 
         ? (
             <TouchableOpacity style={ styles.searchContainer } >
-              <Text style={ styles.title }> ¿A dónde quieres ir?  </Text>
+              <Text style={ styles.titleSection }> ¿A dónde quieres ir?  </Text>
               <SearchInput 
                 styleAlign={ styles.searchInput }
                 placeholder="Busca una ciudad"
@@ -57,7 +57,7 @@ const Search = ({ navigation }) => {
                 value={ inputLocation }
                 iconStyle={ styles.searchIcon }
                 onBlur={ ()=> setIsLocationFolded(true) }
-              />
+              />  
             </TouchableOpacity>
 
         ) : (
@@ -74,7 +74,7 @@ const Search = ({ navigation }) => {
         !isDateFolded
         ? (
             <TouchableOpacity style={ styles.searchContainer }   >
-              <Text style={ styles.title }> Elige una fecha </Text>
+              <Text style={ styles.titleSection }> Elige una fecha </Text>
 
               <CalendarDate 
                 calendarStyle={ styles.calendar }
@@ -108,7 +108,7 @@ const Search = ({ navigation }) => {
         !isGuestFolded 
         ? (
             <TouchableOpacity style={ styles.searchContainer } >
-              <Text style={ styles.title }> Hospedaje </Text>
+              <Text style={ styles.titleSection }> Hospedaje </Text>
   
               <Counter 
                 category="Adultos"
@@ -129,6 +129,7 @@ const Search = ({ navigation }) => {
               />
             )
       }
+
 
       <Button 
         buttonStyle={[styles.mainButton, isMainButtonDisabled ? styles.mainButtonDisabled : styles.mainButtonEnabled ]} 
@@ -153,12 +154,13 @@ const Search = ({ navigation }) => {
         <Text style={ styles.textButton } > Realizar búsqueda </Text>
       </Button>
 
+
       <LoadingModal 
         animationType="fade"
         error={ error }
-        visible={ hasError || isLoading }
-        onHandlerError = { onHandlerButtonModal }
-      /> 
+        isVisible={ hasError || isLoading }
+        onClose={ onHandlerButtonModal }
+      />
 
     </ScrollView>
   )

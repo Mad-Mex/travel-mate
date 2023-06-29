@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-
+import { theme } from "../../constants"
 
 
 export const styles = StyleSheet.create({
@@ -14,7 +14,7 @@ export const styles = StyleSheet.create({
         height: 64,
         fontSize: 16,
         borderBottomWidth: 2,
-        borderBottomColor: "#efefef"
+        borderBottomColor: theme.colors.gray
     },
 
 
@@ -23,6 +23,6 @@ export const styles = StyleSheet.create({
         top: 21,
         left: 18,
         fontSize: 24,
-        color: "#000000"
+        color: theme.colors.black
     }
 })

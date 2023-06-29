@@ -1,10 +1,12 @@
 import { StyleSheet } from "react-native";
+import { theme } from "../../constants"
 
 
 export const styles = StyleSheet.create({
+
     image: {
         marginHorizontal: 20,
-        marginTop: 30,
+        marginTop: 40,
         marginBottom: 4,
         width: "auto",
         height: 160
@@ -27,7 +29,7 @@ export const styles = StyleSheet.create({
         alignItems: "center",
         width: "18%",
         height: 20,
-        backgroundColor: "blue",
+        backgroundColor: theme.colors.black,
         opacity: 0.7
     },
 
@@ -35,7 +37,7 @@ export const styles = StyleSheet.create({
     sponsorText: {
         fontFamily: 'FiraSans-Regular',
         fontSize: 9,
-        color: "#FFF"
+        color: theme.colors.white
     },
 
 
@@ -45,7 +47,7 @@ export const styles = StyleSheet.create({
         marginLeft: 13,
         fontFamily: 'FiraSans-Medium',
         fontSize: 16,
-        color: "#FFF"
+        color: theme.colors.white
     },
 
 
@@ -53,9 +55,9 @@ export const styles = StyleSheet.create({
         marginTop: 2,
         marginLeft: 14,
         marginRight: 40,
-        fontFamily: 'FiraSans-Light',
+        fontFamily: 'FiraSans-Regular',
         fontSize: 10,
-        color: "#FFF"
+        color: theme.colors.white
     },
 
 
@@ -66,7 +68,7 @@ export const styles = StyleSheet.create({
         marginLeft: 16,
         width: "30%",
         height: 18,
-        backgroundColor: "#FFF",
+        backgroundColor: theme.colors.white,
         borderRadius: 30/2
     },
 
@@ -74,6 +76,6 @@ export const styles = StyleSheet.create({
     textButton:{
         fontFamily: 'FiraSans-Regular',
         fontSize: 10,
-        color: "#FFF"
+        color: theme.colors.black
     }
 });

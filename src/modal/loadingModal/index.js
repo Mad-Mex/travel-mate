@@ -1,28 +1,28 @@
 import React from 'react'
-import {  ActivityIndicator, Button, Modal, Text, View } from 'react-native'
+import { ActivityIndicator, Modal, Text, View } from 'react-native'
+import { Button } from "../../components"
 import { theme } from "../../constants"
-import { styles } from './styles'
+import { styles } from "./styles"
 
-
-const LoadingModal = ({ visible, animationType, error, onHandlerError  }) => {
+const LoadingModal = ({ animationType, error, isVisible, onClose }) => {
 
   return (
 
-    <Modal visible={ visible } transparent animationType={ animationType } >
+    <Modal visible={ isVisible } transparent animationType={ animationType }>
         <View style={ styles.overallContainer } >
           <View style={ styles.modalContainer }>
-            <Text style={ styles.modalTitle } > { error ? error : "Cargando" } </Text>
-
+            <Text style={ styles.modalTitle } > { error ? "Se produjo un error" : "Cargando" } </Text>
               {
                 error 
-                
                 ? (
-                  <Button  title='Ok' disabled={ false } onPress={ onHandlerError } />
+                  <Button buttonStyle={ styles.button } disabled={ false } onPress={ onClose } 
+                  >
+                    <Text style={ styles.textButton } > Ok </Text> 
+                  </Button>
                 )
                 
                 : <ActivityIndicator size="large" color={ theme.colors.primary }   />
               }
-
           </View>
         </View>
       </Modal>
@@ -30,3 +30,6 @@ const LoadingModal = ({ visible, animationType, error, onHandlerError  }) => {
 }
 
 export default LoadingModal
+
+
+

@@ -2,13 +2,13 @@ import { StyleSheet } from "react-native";
 import { theme } from "../../constants"
 
 
-
 export const styles = StyleSheet.create({
 
     view: {
         flex: 1,
         backgroundColor: theme.colors.white
     },
+
 
     imageContainer: {
         position: "relative",
@@ -41,7 +41,7 @@ export const styles = StyleSheet.create({
 
 
     iconColor: { 
-        color: theme.colors.white
+        color: theme.colors.gray
     },
 
 
@@ -259,13 +259,7 @@ export const styles = StyleSheet.create({
 
     bookingTextButton:{
         fontFamily: 'FiraSans-Regular',
-        fontSize: 18,
+        fontSize: 19,
         color: theme.colors.white
     }
-
-
-    
-
-
-
 })

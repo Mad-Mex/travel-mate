@@ -16,12 +16,12 @@ const HeaderTitleHome = () => {
             <MaterialCommunityIcons name="bell" style={ styles.icon } />
 
             { 
-                notification 
-                
-                ?   <View style={ styles.notificationContainer } >
-                        <Text style={ styles.textNotification } > 5 </Text>
-                    </View>
-
+                notification                 
+                ? (
+                  <View style={ styles.notificationContainer } >
+                    <Text style={ styles.textNotification } > 1 </Text>
+                  </View>
+                )
                 : null
             }
              

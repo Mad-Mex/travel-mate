@@ -9,6 +9,15 @@ export const styles = StyleSheet.create({
     },
 
 
+    mainTitle: {
+        marginTop: 30,
+        marginLeft: 18,
+        fontFamily: 'FiraSans-SemiBold',
+        fontSize: 24,
+        color: theme.colors.text
+    },
+
+
     searchContainer: {
         marginTop: 36,
         marginHorizontal: 20,
@@ -40,7 +49,7 @@ export const styles = StyleSheet.create({
     },
 
 
-    title: {
+    titleSection: {
         marginLeft: 16,
         fontFamily: 'FiraSans-SemiBold',
         fontSize: 22,
@@ -75,7 +84,7 @@ export const styles = StyleSheet.create({
 
     textButton: {
         fontFamily: 'FiraSans-Regular',
-        fontSize: 18,
+        fontSize: 19,
         color: theme.colors.white
     },
 
@@ -93,7 +102,6 @@ export const styles = StyleSheet.create({
 
     mainButtonDisabled: {
         opacity: 0.5
-    }
-    
-}
+    }   
+ }
 )

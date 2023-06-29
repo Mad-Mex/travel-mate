@@ -20,14 +20,13 @@ const SearchInput = ({ styleAlign, placeholder, value, onChange, onBlur, iconSty
         {
           value !== ""
           ? (
-            <TouchableOpacity style={ styles.closeIconContainer } onPress={() => onChange("") }  >
+            <TouchableOpacity style={ styles.closeIconContainer } onPress={() => onChange("") } hitSlop={ 14 }  >
               <AntDesign name="closecircle" style={ styles.closeIcon } />
             </TouchableOpacity>
             
           )
           : null
         }
-
     </View>
   )
 }

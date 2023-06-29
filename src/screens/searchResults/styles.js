@@ -2,7 +2,6 @@ import { StyleSheet } from "react-native";
 import { theme } from "../../constants"
 
 
-
 export const styles = StyleSheet.create({
 
     view: {
@@ -18,7 +17,5 @@ export const styles = StyleSheet.create({
         fontFamily: 'FiraSans-Medium',
         fontSize: 28,
         color: theme.colors.text
-    },
-
-    
+    }    
 });

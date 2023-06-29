@@ -22,7 +22,7 @@ export const locations = [
           cancelationDays: "3",
           services: [
             {
-              name: "Agua caliente",
+              name: "Agua potable",
               iconName: "water-outline"
             },
 
@@ -73,13 +73,8 @@ export const locations = [
           cancelationDays: "14",
           services: [
             {
-              name: "Agua caliente",
+              name: "Agua potable",
               iconName: "water-outline"
-            },
-
-            {
-              name: "Regadera",
-              iconName: "shower-head"
             },
 
             {
@@ -88,15 +83,10 @@ export const locations = [
             },
 
             {
-              name: "Arreglos florales",
+              name: "Floristería",
               iconName: "flower"
             },
             
-            {
-              name: "Lavandería",
-              iconName: "washing-machine"
-            },
-
             {
               name: "Planchado",
               iconName: "iron-outline"
@@ -141,7 +131,7 @@ export const locations = [
           cancelationDays: "3",
           services: [
             {
-              name: "Agua caliente",
+              name: "Agua potable",
               iconName: "water-outline"
             },
 
@@ -153,6 +143,11 @@ export const locations = [
             {
               name: "Cocina",
               iconName: "bowl-mix-outline"
+            },
+
+            {
+              name: "Planchado",
+              iconName: "iron-outline"
             },
             
 
@@ -187,7 +182,7 @@ export const locations = [
           cancelationDays: "20",
           services: [
             {
-              name: "Agua caliente",
+              name: "Agua potable",
               iconName: "water-outline"
             },
 
@@ -244,7 +239,7 @@ export const locations = [
           cancelationDays: "7",
           services: [
             {
-              name: "Agua caliente",
+              name: "Agua potable",
               iconName: "water-outline"
             },
 
@@ -295,7 +290,7 @@ export const locations = [
           cancelationDays: "5",
           services: [
             {
-              name: "Agua caliente",
+              name: "Agua potable",
               iconName: "water-outline"
             },
 
@@ -345,7 +340,7 @@ export const locations = [
           cancelationDays: "12",
           services: [
             {
-              name: "Agua caliente",
+              name: "Agua potable",
               iconName: "water-outline"
             },
 
@@ -370,7 +365,7 @@ export const locations = [
             },
 
             {
-              name: "Cámaras en el exterior",
+              name: "Seguridad",
               iconName: "cctv"
             },
 
@@ -402,7 +397,7 @@ export const locations = [
           cancelationDays: "3",
           services: [
             {
-              name: "Agua caliente",
+              name: "Agua potable",
               iconName: "water-outline"
             },
 
@@ -453,7 +448,7 @@ export const locations = [
           cancelationDays: "5",
           services: [
             {
-              name: "Agua caliente",
+              name: "Agua potable",
               iconName: "water-outline"
             },
 
@@ -504,7 +499,7 @@ export const locations = [
           cancelationDays: "2",
           services: [
             {
-              name: "Agua caliente",
+              name: "Agua potable",
               iconName: "water-outline"
             },
 
@@ -550,7 +545,7 @@ export const locations = [
           cancelationDays: "2",
           services: [
             {
-              name: "Agua caliente",
+              name: "Agua potable",
               iconName: "water-outline"
             },
 
@@ -590,7 +585,7 @@ export const locations = [
           cancelationDays: "7",
           services: [
             {
-              name: "Agua caliente",
+              name: "Agua potable",
               iconName: "water-outline"
             },
 

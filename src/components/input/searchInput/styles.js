@@ -1,6 +1,7 @@
 import { StyleSheet } from "react-native";
 import { theme } from "../../../constants"
 
+
 export const styles = StyleSheet.create({
     
     input: {
@@ -11,11 +12,12 @@ export const styles = StyleSheet.create({
         height: 44,
         fontFamily: 'FiraSans-Regular',
         color: theme.colors.text,
-        fontSize: 16,
+        fontSize: 17,
         borderWidth: 2,
         borderColor: theme.colors.accent2,
         borderRadius: 44 / 2,
     },
+
 
     closeIconContainer: {
         position: "absolute",
@@ -23,6 +25,7 @@ export const styles = StyleSheet.create({
         right: 38,
     },
 
+    
     closeIcon: {
         fontSize: 20,
         color: theme.colors.black

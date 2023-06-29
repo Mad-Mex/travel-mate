@@ -35,8 +35,7 @@ const Counter = ({ category, guest, onGuest }) => {
             </TouchableOpacity>
         </View>
 
-    </View>
-    
+    </View>    
   )
 }
 

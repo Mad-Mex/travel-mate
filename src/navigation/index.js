@@ -3,13 +3,10 @@ import AuthNavigator from "./auth";
 import TabsNavigator from "./tabs";
 
 
-
-
 const Navigation = () => {
     return(
         <NavigationContainer>
-            <TabsNavigator />
-            
+            <AuthNavigator />
         </NavigationContainer>
     )
 }

@@ -4,6 +4,7 @@ import { useNavigation } from '@react-navigation/native'
 import { URL_MAPS } from "../../constants"
 import { styles } from './styles'
 
+
 const MapPreview = ({ location }) => {
   
   const navigation = useNavigation()
@@ -14,13 +15,13 @@ const MapPreview = ({ location }) => {
 
     <View>
         {
-            location 
-            ?(
-              <TouchableOpacity style={ styles.mapContainer } onPress={() => navigation.navigate("Maps", { location })} >
-                <Image source={{ uri: mapPreviewUrl }} style={ styles.map } />
-              </TouchableOpacity>
-            )  
-            : null
+          location 
+          ?(
+            <TouchableOpacity style={ styles.mapContainer } onPress={() => navigation.navigate("Maps", { location })} >
+              <Image source={{ uri: mapPreviewUrl }} style={ styles.map } />
+            </TouchableOpacity>
+          )  
+          : null
         }
     </View>
   )

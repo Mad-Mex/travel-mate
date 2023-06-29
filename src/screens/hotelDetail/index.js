@@ -30,7 +30,6 @@ const HotelDetail = ({ navigation, route }) => {
     return(
 
         <>
-        
         <ScrollView style={ styles.view } >
 
             <View style={ styles.imageContainer } >

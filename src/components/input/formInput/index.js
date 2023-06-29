@@ -1,7 +1,7 @@
 import React from 'react'
 import {  Text, TextInput, View } from 'react-native'
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import styles from './styles'
+import { styles } from './styles'
 
 const FormInput = (
   { 
@@ -46,8 +46,7 @@ const FormInput = (
             </View>
         )
         : null
-      }
-      
+      }      
     </View>     
   )
 }

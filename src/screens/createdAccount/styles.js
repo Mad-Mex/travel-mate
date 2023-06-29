@@ -1,10 +1,11 @@
 import { StyleSheet } from "react-native";
+import { theme } from "../../constants"
 
 
 const styles = StyleSheet.create({
     view: {
         flex: 1,
-        backgroundColor: "orange"
+        backgroundColor: theme.colors.tertiary
     },
 
     imageContainer: {
@@ -23,7 +24,7 @@ const styles = StyleSheet.create({
         fontFamily: 'FiraSans-Regular',
         fontSize: 27,
         lineHeight: 34,
-        color: "#fff"
+        color: theme.colors.white
     },
 
 
@@ -37,14 +38,14 @@ const styles = StyleSheet.create({
         marginHorizontal: 18,
         fontFamily: 'FiraSans-Regular',
         fontSize: 15,
-        color: "#fff"
+        color: theme.colors.white
     },
 
 
     listContainer: {
         marginHorizontal: 22,
         marginTop: 14,
-        borderColor: "#fff"
+        borderColor: theme.colors.white
     },
 
 
@@ -58,27 +59,27 @@ const styles = StyleSheet.create({
     icon: {
         marginRight: 12,
         fontSize: 22,
-        color: "#fff",
+        color: theme.colors.white,
     },
 
 
     feature: {
         fontFamily: 'FiraSans-Regular',
         fontSize: 14,
-        color: "#fff"
+        color: theme.colors.white
     },
 
 
     button: {
         marginTop: 70,
-        backgroundColor: "#fff"
+        backgroundColor: theme.colors.white
     },
 
 
     textButton: {
         fontFamily: 'FiraSans-Medium',
-        fontSize: 18,
-        color: "#000000"
+        fontSize: 19,
+        color: theme.colors.text
     }
 
 

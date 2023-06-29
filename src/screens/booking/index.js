@@ -1,19 +1,22 @@
-import React, { useState } from 'react'
-import { Image, ScrollView, Text, View } from 'react-native'
-import { MaterialIcons } from "@expo/vector-icons"
-import { useSelector } from 'react-redux' 
+import React, { useState }  from 'react'
+import { ActivityIndicator, Image, Modal, ScrollView, Text, View } from 'react-native'
+import { useDispatch, useSelector } from 'react-redux' 
+import { createTravels  } from "../../store/actions"
 import { Button } from "../../components"
-
+ import { MaterialIcons } from "@expo/vector-icons"
+ import { theme } from '../../constants'
 import { styles } from './styles'
 
 
+const Booking = ({ navigation, route }) => {
 
-const Booking = ({ route }) => {
-
+  const dispatch = useDispatch()
   const bookingInfo = useSelector( state => state.booking )
+  const { date, guest  } = bookingInfo
   const { search } = route.params
-  const { location, hotelName, hotelImage, price  } = search
-    
+  const { hotelImage, hotelName, location, price } = search
+  const [ isLoading, setIsLoading] = useState(false) 
+  
   return (
     
     <ScrollView style={ styles.view } >
@@ -33,7 +36,7 @@ const Booking = ({ route }) => {
 
         <View style={ styles.flexContainer2 }>
           <MaterialIcons name='date-range' style={ styles.icon } />
-          <Text  style={ styles.infoContainer } > { bookingInfo.date } </Text> 
+          <Text  style={ styles.infoContainer } > { date } </Text> 
         </View>
       </View>
 
@@ -41,7 +44,7 @@ const Booking = ({ route }) => {
         
         <View style={ styles.flexContainer2 }>
           <MaterialIcons name="person" style={ styles.icon } />
-          <Text  style={ styles.infoContainer } > { `${ bookingInfo.guest } adultos` } </Text> 
+          <Text  style={ styles.infoContainer } > { `${ guest } adultos` } </Text> 
         </View>
       </View>
 
@@ -55,10 +58,45 @@ const Booking = ({ route }) => {
 
       <View style={ styles.divider } ></View>
 
-      <Button buttonStyle={ styles.button } disabled={ false }>
+      <Button 
+        buttonStyle={ styles.button } 
+        disabled={ false } 
+        onPress={ () =>  {
+
+            setIsLoading(true)
+            
+            dispatch( createTravels({
+              travel: {
+                hotelImage,
+                hotelName,
+                location,
+                date,
+                guest
+              }
+            }))
+
+            setTimeout(() => {
+              setIsLoading(true)
+              setIsLoading(false)
+              navigation.navigate("BookingCompleted")
+            }, 3000);
+     
+        }} >
+
         <Text style={ styles.textButton } > Pagar </Text>
       </Button>
-      
+
+
+      <Modal visible={ isLoading } transparent animationType='fade'>
+        <View style={ styles.overallContainer } >
+          <View style={ styles.modalContainer }>
+            <Text style={ styles.modalTitle } >  Procesando tu orden </Text>  
+              <ActivityIndicator size="large" color={ theme.colors.primary } />
+          </View>
+        </View>
+      </Modal>
+
+     
     </ScrollView>
   )
 }
